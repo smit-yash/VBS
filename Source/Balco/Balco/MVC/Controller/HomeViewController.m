@@ -1,27 +1,74 @@
-//
-//  ViewController.m
-//  Balco
-//
-//  Created by optimusmac-12 on 20/08/16.
-//  Copyright © 2016 sy. All rights reserved.
-//
+#import "HomeViewController.h"
+#import "HomeTableViewCell.h"
 
-#import "ViewController.h"
+#define kTableViewCellHeight 80.0f
 
-@interface ViewController ()
+@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation ViewController
+@implementation HomeViewController {
+    
+    __weak IBOutlet UITableView *homeTableView;
+}
+
+#pragma mark - Utility
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - TableView
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return kTableViewCellHeight;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell"];
+    
+    cell.containerView.layer.cornerRadius = 10.0f;
+    cell.dateLabel.text = @"13 Aug, 2013";
+    cell.titleLabel.text = @"An Event";
+    cell.descriptionLabel.text = @"Some Description";
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+//    [self performSegueWithIdentifier:showDetailSegueIdentifier sender:self];
+}
+
+#pragma mark - Button Actions
+
+- (IBAction)leadersVoiceButtonAction:(id)sender {
+}
+
+- (IBAction)policiesButtonAction:(id)sender {
+}
+
+- (IBAction)quizButtonAction:(id)sender {
+}
+
+- (IBAction)standardButtonAction:(id)sender {
+}
+
+- (IBAction)scoreButtonAction:(id)sender {
+}
+
+- (IBAction)reportButtonAction:(id)sender {
+}
+
+#pragma mark - Web API Calls
+
 
 @end
