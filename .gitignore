@@ -16,7 +16,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-!default.xcworkspace
 
 ## Other
 *.moved-aside
@@ -28,6 +27,13 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+##Xcode 7
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.xcworkspace
+!default.xcworkspace
+*.xcscmblueprint
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -35,6 +41,8 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+!Podfile
+!Podfile.lock
 
 # Carthage
 #
