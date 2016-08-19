@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		131BAC6E339B359313410D22 /* libPods-Balco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8096D604E91F4981FB61956C /* libPods-Balco.a */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
+		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
 		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
 		DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9801D678A0F006BBA45 /* AppDelegate.m */; };
 		DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9851D678A0F006BBA45 /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		8096D604E91F4981FB61956C /* libPods-Balco.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Balco.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB066B981D67A9EC00162079 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
+		DB5FB3591D67C50D00B44069 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
 		DBA8F9791D678A0F006BBA45 /* Balco Sustainability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balco Sustainability.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA8F97D1D678A0F006BBA45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA8F97F1D678A0F006BBA45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 		DBA8F99B1D678A99006BBA45 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DB5FB3581D67C50D00B44069 /* WebServices.h */,
+				DB5FB3591D67C50D00B44069 /* WebServices.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
+				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
 				DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */,
 				DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */,
