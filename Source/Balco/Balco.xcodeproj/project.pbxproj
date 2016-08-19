@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
+		DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9801D678A0F006BBA45 /* AppDelegate.m */; };
+		DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9851D678A0F006BBA45 /* Main.storyboard */; };
+		DBA8F9891D678A0F006BBA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9881D678A0F006BBA45 /* Assets.xcassets */; };
+		DBA8F98C1D678A0F006BBA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */; };
+		DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9981D678A99006BBA45 /* HomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DBA8F9791D678A0F006BBA45 /* Balco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balco.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA8F97D1D678A0F006BBA45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBA8F97F1D678A0F006BBA45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBA8F9801D678A0F006BBA45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBA8F9861D678A0F006BBA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBA8F9881D678A0F006BBA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBA8F98B1D678A0F006BBA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBA8F98D1D678A0F006BBA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA8F9971D678A99006BBA45 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DBA8F9981D678A99006BBA45 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBA8F9761D678A0F006BBA45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBA8F9701D678A0F006BBA45 = {
+			isa = PBXGroup;
+			children = (
+				DBA8F97B1D678A0F006BBA45 /* Balco */,
+				DBA8F97A1D678A0F006BBA45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBA8F97A1D678A0F006BBA45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8F9791D678A0F006BBA45 /* Balco.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA8F97B1D678A0F006BBA45 /* Balco */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8F9931D678A99006BBA45 /* Images */,
+				DBA8F9941D678A99006BBA45 /* Misc */,
+				DBA8F9951D678A99006BBA45 /* MVC */,
+				DBA8F99B1D678A99006BBA45 /* Utility */,
+				DBA8F97F1D678A0F006BBA45 /* AppDelegate.h */,
+				DBA8F9801D678A0F006BBA45 /* AppDelegate.m */,
+				DBA8F9851D678A0F006BBA45 /* Main.storyboard */,
+				DBA8F9881D678A0F006BBA45 /* Assets.xcassets */,
+				DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */,
+				DBA8F98D1D678A0F006BBA45 /* Info.plist */,
+				DBA8F97C1D678A0F006BBA45 /* Supporting Files */,
+			);
+			path = Balco;
+			sourceTree = "<group>";
+		};
+		DBA8F97C1D678A0F006BBA45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8F97D1D678A0F006BBA45 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBA8F9931D678A99006BBA45 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DBA8F9941D678A99006BBA45 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		DBA8F9951D678A99006BBA45 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8F9961D678A99006BBA45 /* Controller */,
+				DBA8F9991D678A99006BBA45 /* Model */,
+				DBA8F99A1D678A99006BBA45 /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		DBA8F9961D678A99006BBA45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8F9971D678A99006BBA45 /* HomeViewController.h */,
+				DBA8F9981D678A99006BBA45 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DBA8F9991D678A99006BBA45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBA8F99A1D678A99006BBA45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBA8F99B1D678A99006BBA45 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBA8F9781D678A0F006BBA45 /* Balco */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA8F9901D678A0F006BBA45 /* Build configuration list for PBXNativeTarget "Balco" */;
+			buildPhases = (
+				DBA8F9751D678A0F006BBA45 /* Sources */,
+				DBA8F9761D678A0F006BBA45 /* Frameworks */,
+				DBA8F9771D678A0F006BBA45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Balco;
+			productName = Balco;
+			productReference = DBA8F9791D678A0F006BBA45 /* Balco.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBA8F9711D678A0F006BBA45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = sy;
+				TargetAttributes = {
+					DBA8F9781D678A0F006BBA45 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = DBA8F9741D678A0F006BBA45 /* Build configuration list for PBXProject "Balco" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBA8F9701D678A0F006BBA45;
+			productRefGroup = DBA8F97A1D678A0F006BBA45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBA8F9781D678A0F006BBA45 /* Balco */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBA8F9771D678A0F006BBA45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA8F98C1D678A0F006BBA45 /* LaunchScreen.storyboard in Resources */,
+				DBA8F9891D678A0F006BBA45 /* Assets.xcassets in Resources */,
+				DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBA8F9751D678A0F006BBA45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
+				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
+				DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBA8F9851D678A0F006BBA45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA8F9861D678A0F006BBA45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA8F98B1D678A0F006BBA45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBA8F98E1D678A0F006BBA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBA8F98F1D678A0F006BBA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBA8F9911D678A0F006BBA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Balco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sy.Balco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBA8F9921D678A0F006BBA45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Balco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sy.Balco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBA8F9741D678A0F006BBA45 /* Build configuration list for PBXProject "Balco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA8F98E1D678A0F006BBA45 /* Debug */,
+				DBA8F98F1D678A0F006BBA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA8F9901D678A0F006BBA45 /* Build configuration list for PBXNativeTarget "Balco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA8F9911D678A0F006BBA45 /* Debug */,
+				DBA8F9921D678A0F006BBA45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBA8F9711D678A0F006BBA45 /* Project object */;
+}
