@@ -7,28 +7,30 @@
 #define kLargeTableViewCellHeight 80.0f
 
 @implementation VSAPViewController {
-    NSArray *scoreArray;
+	NSArray *scoreArray;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    
-    [[WebServices new] fetchScoresSuccess:^(NSDictionary *responseDict) {
-        if ([responseDict objectForKey:@"data"]) {
-            scoreArray = [NSArray arrayWithArray:(NSArray *)[responseDict objectForKey:@"data"]];
-            [self.tableView reloadData];
-        }
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    self.navigationItem.backBarButtonItem.title = @"Back";
-
+	self.headerContainerView.layer.cornerRadius = 5.0f;
+	[[WebServices new] fetchScoresSuccess:^(NSDictionary *responseDict) {
+	  if ([responseDict objectForKey:@"data"]) {
+		  scoreArray =
+		      [NSArray arrayWithArray:(NSArray *)[responseDict
+						  objectForKey:@"data"]];
+		  [self.tableView reloadData];
+	  }
+	}
+	    failure:^(NSError *error) {
+	      NSLog(@"%@", error);
+	    }];
+	self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
     heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-		return kLargeTableViewCellHeight;
+
+	return kLargeTableViewCellHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -39,18 +41,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
 	 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-		VSAPTableViewCell *cell =
-		    [tableView dequeueReusableCellWithIdentifier:@"VSAPCell"];
-        NSDictionary *dict = [scoreArray objectAtIndex:indexPath.row];
-        
-		cell.detailLabel.text = [dict objectForKey:@"Department"];
-		cell.scoreValueLabel.text = [dict objectForKey:@"Score"];
-		cell.smileyImageView.image =
-		    [UIImage imageNamed:[dict objectForKey:@"Remark"]];
-		cell.containerView.layer.cornerRadius = 5.0f;
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		return cell;
-//	}
+	VSAPTableViewCell *cell =
+	    [tableView dequeueReusableCellWithIdentifier:@"VSAPCell"];
+	NSDictionary *dict = [scoreArray objectAtIndex:indexPath.row];
+
+	cell.detailLabel.text = [dict objectForKey:@"Department"];
+	cell.scoreValueLabel.text = [dict objectForKey:@"Score"];
+	cell.smileyImageView.image =
+	    [UIImage imageNamed:[dict objectForKey:@"Remark"]];
+	cell.containerView.layer.cornerRadius = 5.0f;
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	return cell;
+	//	}
 }
 
 - (void)tableView:(UITableView *)tableView
