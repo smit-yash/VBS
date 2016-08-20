@@ -45,4 +45,10 @@
 	return cell;
 }
 
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[self performSegueWithIdentifier:@"PoliciesWebViewSegue" sender:self];
+	[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 @end

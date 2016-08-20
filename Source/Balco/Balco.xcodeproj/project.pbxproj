@@ -13,6 +13,7 @@
 		9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */; };
 		9306EE6E1D6876460063E614 /* VSAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE6D1D6876460063E614 /* VSAPViewController.m */; };
 		9306EE711D68794D0063E614 /* VSAPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE701D68794D0063E614 /* VSAPTableViewCell.m */; };
+		9306EE741D6896940063E614 /* PoliciesWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE731D6896940063E614 /* PoliciesWebViewController.m */; };
 		9370324A1D683A0C001C673E /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032491D683A0C001C673E /* OTPViewController.m */; };
 		9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9370324E1D683CC6001C673E /* LaunchScreenViewController.m */; };
 		937032521D683E88001C673E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032511D683E88001C673E /* LoginViewController.m */; };
@@ -42,6 +43,8 @@
 		9306EE6D1D6876460063E614 /* VSAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAPViewController.m; sourceTree = "<group>"; };
 		9306EE6F1D68794D0063E614 /* VSAPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSAPTableViewCell.h; sourceTree = "<group>"; };
 		9306EE701D68794D0063E614 /* VSAPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAPTableViewCell.m; sourceTree = "<group>"; };
+		9306EE721D6896940063E614 /* PoliciesWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliciesWebViewController.h; sourceTree = "<group>"; };
+		9306EE731D6896940063E614 /* PoliciesWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliciesWebViewController.m; sourceTree = "<group>"; };
 		937032481D683A0C001C673E /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
 		937032491D683A0C001C673E /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
 		9370324D1D683CC6001C673E /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				DB02484D1D6898D800322DB7 /* MsgDetailViewController.m */,
 				9306EE601D6862CB0063E614 /* PoliciesViewController.h */,
 				9306EE611D6862CB0063E614 /* PoliciesViewController.m */,
+				9306EE721D6896940063E614 /* PoliciesWebViewController.h */,
+				9306EE731D6896940063E614 /* PoliciesWebViewController.m */,
 				DB0248491D687C7000322DB7 /* QuizViewController.h */,
 				DB02484A1D687C7000322DB7 /* QuizViewController.m */,
 				9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */,
@@ -368,6 +373,7 @@
 				DB02484B1D687C7000322DB7 /* QuizViewController.m in Sources */,
 				9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
+				9306EE741D6896940063E614 /* PoliciesWebViewController.m in Sources */,
 				9306EE6E1D6876460063E614 /* VSAPViewController.m in Sources */,
 				9306EE681D6864130063E614 /* PoliciesTableViewCell.m in Sources */,
 				DB02484E1D6898D800322DB7 /* MsgDetailViewController.m in Sources */,

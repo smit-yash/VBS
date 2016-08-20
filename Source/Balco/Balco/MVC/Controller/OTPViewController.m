@@ -13,6 +13,22 @@
 	// Do any additional setup after loading the view.
 	[self initializeTextFieldsBackGround];
 	self.navigationItem.hidesBackButton = NO;
+	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+	    initWithTarget:self
+		    action:@selector(dismissKeyboard)];
+	[self.view addGestureRecognizer:tap];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
+	[[NSNotificationCenter defaultCenter]
+	    removeObserver:self
+		      name:UIKeyboardWillShowNotification
+		    object:nil];
+	[[NSNotificationCenter defaultCenter]
+	    removeObserver:self
+		      name:UIKeyboardWillHideNotification
+		    object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -20,6 +36,17 @@
 
 	[self initializeTextFieldsBackGround];
 	self.navigationItem.hidesBackButton = NO;
+
+	[[NSNotificationCenter defaultCenter]
+	    addObserver:self
+	       selector:@selector(keyboardDidShow:)
+		   name:UIKeyboardWillShowNotification
+		 object:nil];
+	[[NSNotificationCenter defaultCenter]
+	    addObserver:self
+	       selector:@selector(keyboardDidHide:)
+		   name:UIKeyboardWillHideNotification
+		 object:nil];
 }
 
 - (void)initializeTextFieldsBackGround {
@@ -72,23 +99,75 @@
 - (BOOL)textField:(UITextField *)textField
     shouldChangeCharactersInRange:(NSRange)range
 		replacementString:(NSString *)string {
-	if (([string rangeOfCharacterFromSet:[[NSCharacterSet
-						 decimalDigitCharacterSet]
-						 invertedSet]]
-		 .location != NSNotFound) &&
-	    !(range.length == 1 && string.length == 0)) {
-		return NO;
+	BOOL shouldProcess = NO; // default to reject
+	BOOL shouldMoveToNextField =
+	    NO; // default to remaining on the current field
+
+	NSUInteger insertStringLength = [string length];
+	if (insertStringLength == 0) { // backspace
+		shouldProcess =
+		    YES; // Process if the backspace character was pressed
+	} else {
+		if ([[textField text] length] == 0) {
+			shouldProcess = YES; // Process if there is only 1
+			// character right now
+		}
 	}
-	if (([textField.text stringByReplacingCharactersInRange:range
-						     withString:string]
-		 .length > 1)) {
-		return NO;
+
+	// here we deal with the UITextField on our own
+	if (shouldProcess) {
+		// grab a mutable copy of what's currently in the UITextField
+		NSMutableString *mstring = [[textField text] mutableCopy];
+		if ([mstring length] == 0) {
+			// nothing in the field yet so append the replacement
+			// string
+			[mstring appendString:string];
+
+			shouldMoveToNextField = YES;
+		} else {
+			// adding a char or deleting?
+			if (insertStringLength > 0) {
+				[mstring insertString:string
+					      atIndex:range.location];
+			} else {
+				// delete case - the length of replacement
+				// string is zero for a delete
+				[mstring deleteCharactersInRange:range];
+			}
+		}
+
+		// set the text now
+		[textField setText:mstring];
+		if (shouldMoveToNextField) {
+			if (textField == self.textField1) {
+				[self.textField2 becomeFirstResponder];
+			} else if (textField == self.textField2) {
+				[self.textField3 becomeFirstResponder];
+			} else if (textField == self.textField3) {
+				[self.textField4 becomeFirstResponder];
+			} else if (textField == self.textField4) {
+				[self.textField4 resignFirstResponder];
+				[self submitButtonAction:nil];
+			}
+		}
 	}
-	return YES;
+
+	// always return no since we are manually changing the text field
+	return NO;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-	[textField resignFirstResponder];
-	return YES;
+- (void)keyboardDidShow:(NSNotification *)notification {
+	[self.view setFrame:CGRectMake(0, -60, self.view.frame.size.width,
+				       self.view.frame.size.height)];
 }
+
+- (void)keyboardDidHide:(NSNotification *)notification {
+	[self.view setFrame:CGRectMake(0, 0, self.view.frame.size.width,
+				       self.view.frame.size.height)];
+}
+
+- (void)dismissKeyboard {
+	[self.view endEditing:YES];
+}
+
 @end
