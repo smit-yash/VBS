@@ -2,8 +2,8 @@
 
 @interface WebServices : NSObject
 
-- (void)loginWithPhoneNumber:(NSInteger)phoneNumber;
-- (void)verifyOTP:(NSInteger)otp;
+- (void)loginWithPhoneNumber:(NSString *)phoneNumber;
+- (void)verifyOTP:(NSString *)otp;
 - (void)fetchHomeMessageWithId:(NSInteger)id;
 - (void)fetchLeadersVoice;
 - (void)fetchCategories;
