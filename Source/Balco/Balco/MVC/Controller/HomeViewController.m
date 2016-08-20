@@ -1,5 +1,6 @@
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
+#import "WebServices.h"
 
 #define kTableViewCellHeight 80.0f
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[WebServices new] loginWithPhoneNumber:@"1111111111"];
 }
 
 #pragma mark - TableView
