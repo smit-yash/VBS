@@ -24,6 +24,7 @@
 	self.mobileNumberTextField.layer.borderColor =
 	    [[UIColor lightGrayColor] CGColor];
 	self.mobileNumberTextField.layer.borderWidth = 1.0;
+    self.mobileNumberTextField.delegate = self;
 }
 
 - (IBAction)loginButtonAction:(id)sender {

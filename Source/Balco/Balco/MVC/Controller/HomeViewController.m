@@ -17,14 +17,15 @@
 #pragma mark - Utility
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
-        homeMessageArray = responseArray;
-        [homeTableView reloadData];
-    } failure:^(NSError *error) {
-        NSLog(@"eoor %@",error);
-    }];
+	[super viewDidLoad];
+
+	[[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
+	  homeMessageArray = responseArray;
+	  [homeTableView reloadData];
+	}
+	    failure:^(NSError *error) {
+	      NSLog(@"eoor %@", error);
+	    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,8 +53,8 @@
 	HomeTableViewCell *cell =
 	    [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell"];
 
-    NSDictionary *currentMessage = homeMessageArray[indexPath.row];
-    
+	NSDictionary *currentMessage = homeMessageArray[indexPath.row];
+
 	cell.containerView.layer.cornerRadius = 10.0f;
 	cell.dateLabel.text = [currentMessage objectForKey:@"IssueDate"];
 	cell.titleLabel.text = [currentMessage objectForKey:@"Title"];
@@ -73,11 +74,11 @@
 #pragma mark - Button Actions
 
 - (IBAction)policiesButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"PoliciesSegue" sender:self];
+	[self performSegueWithIdentifier:@"PoliciesSegue" sender:self];
 }
 
 - (IBAction)standardButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"StandardSegue" sender:self];
+	[self performSegueWithIdentifier:@"StandardSegue" sender:self];
 }
 
 - (IBAction)leadersVoiceButtonAction:(id)sender {
@@ -87,11 +88,10 @@
 }
 
 - (IBAction)scoreButtonAction:(id)sender {
+	[self performSegueWithIdentifier:@"VSAPSegue" sender:self];
 }
 
 - (IBAction)reportButtonAction:(id)sender {
 }
-
-#pragma mark - Web API Calls
 
 @end

@@ -1,14 +1,6 @@
-//
-//  OTPViewController.h
-//  Balco
-//
-//  Created by optimusmac4 on 8/20/16.
-//  Copyright © 2016 sy. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
-@interface OTPViewController : UIViewController
+@interface OTPViewController : UIViewController <UITextFieldDelegate>
 
 @property(weak, nonatomic) IBOutlet UITextField *textField1;
 @property(weak, nonatomic) IBOutlet UITextField *textField2;
