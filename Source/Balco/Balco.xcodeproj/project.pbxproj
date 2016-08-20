@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		131BAC6E339B359313410D22 /* libPods-Balco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8096D604E91F4981FB61956C /* libPods-Balco.a */; };
+		9306EE621D6862CB0063E614 /* PoliciesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE611D6862CB0063E614 /* PoliciesViewController.m */; };
+		9306EE681D6864130063E614 /* PoliciesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE671D6864130063E614 /* PoliciesTableViewCell.m */; };
+		9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */; };
 		9370324A1D683A0C001C673E /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032491D683A0C001C673E /* OTPViewController.m */; };
 		9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9370324E1D683CC6001C673E /* LaunchScreenViewController.m */; };
 		937032521D683E88001C673E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032511D683E88001C673E /* LoginViewController.m */; };
@@ -24,6 +27,12 @@
 		1A38B73702CDDD995E1F99C4 /* Pods-Balco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balco/Pods-Balco.debug.xcconfig"; sourceTree = "<group>"; };
 		7D9E9089352874819AA410AC /* Pods-Balco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balco.release.xcconfig"; path = "Pods/Target Support Files/Pods-Balco/Pods-Balco.release.xcconfig"; sourceTree = "<group>"; };
 		8096D604E91F4981FB61956C /* libPods-Balco.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Balco.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9306EE601D6862CB0063E614 /* PoliciesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliciesViewController.h; sourceTree = "<group>"; };
+		9306EE611D6862CB0063E614 /* PoliciesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliciesViewController.m; sourceTree = "<group>"; };
+		9306EE661D6864130063E614 /* PoliciesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliciesTableViewCell.h; sourceTree = "<group>"; };
+		9306EE671D6864130063E614 /* PoliciesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliciesTableViewCell.m; sourceTree = "<group>"; };
+		9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SustainabilityStandardViewController.h; sourceTree = "<group>"; };
+		9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SustainabilityStandardViewController.m; sourceTree = "<group>"; };
 		937032481D683A0C001C673E /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
 		937032491D683A0C001C673E /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
 		9370324D1D683CC6001C673E /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
@@ -152,6 +161,10 @@
 				9370324E1D683CC6001C673E /* LaunchScreenViewController.m */,
 				937032501D683E88001C673E /* LoginViewController.h */,
 				937032511D683E88001C673E /* LoginViewController.m */,
+				9306EE601D6862CB0063E614 /* PoliciesViewController.h */,
+				9306EE611D6862CB0063E614 /* PoliciesViewController.m */,
+				9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */,
+				9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +181,8 @@
 			children = (
 				DB066B981D67A9EC00162079 /* HomeTableViewCell.h */,
 				DB066B991D67A9EC00162079 /* HomeTableViewCell.m */,
+				9306EE661D6864130063E614 /* PoliciesTableViewCell.h */,
+				9306EE671D6864130063E614 /* PoliciesTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,9 +335,12 @@
 				937032521D683E88001C673E /* LoginViewController.m in Sources */,
 				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
 				9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */,
+				9306EE621D6862CB0063E614 /* PoliciesViewController.m in Sources */,
 				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,
 				9370324A1D683A0C001C673E /* OTPViewController.m in Sources */,
+				9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
+				9306EE681D6864130063E614 /* PoliciesTableViewCell.m in Sources */,
 				DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */,
 				DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */,
 			);
