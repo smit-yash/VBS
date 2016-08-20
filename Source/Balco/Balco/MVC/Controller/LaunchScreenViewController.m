@@ -1,11 +1,3 @@
-//
-//  LaunchScreenViewController.m
-//  Balco
-//
-//  Created by optimusmac4 on 8/20/16.
-//  Copyright © 2016 sy. All rights reserved.
-//
-
 #import "LaunchScreenViewController.h"
 #import "LoginViewController.h"
 

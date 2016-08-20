@@ -4,7 +4,7 @@
 #define kBaseURL @"http://bsapp.app6.in"
 #define kLoginEndpoint @"/API/App/LoginAPI.aspx"
 #define kVerifyOTPEndpoint @"/API/App/OTPVerficationAPI.aspx"
-#define kHomeMessageEndpoint @""
+#define kHomeMessageEndpoint @"/api/app/msg.aspx?id=0"
 #define kLeadersVoiceEndpoint @""
 #define kCategoriesEndpoint @""
 #define kPDFsEndpoint @""
@@ -13,6 +13,7 @@
 
 #define kLoginSuccessMessage @"otp_sent"
 #define kVerifyOTPSuccessMessage @"otp_verified"
+#define kMessageAPISuccessMessage @"success"
 
 @implementation WebServices {
     AFHTTPSessionManager *manager;
@@ -78,8 +79,23 @@
     }];
 }
 
-- (void)fetchHomeMessageWithId:(NSInteger)id {
+- (void)fetchHomeMessageSuccess:(void (^)(NSArray *responseArray))success failure:(void (^)(NSError *error))failure {
+    [self initializeManager];
     
+    NSString *urlString = [self urlStringForEndpoint:kHomeMessageEndpoint];
+    
+    [manager POST:urlString parameters:nil constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        if ([[[responseDict objectForKey:@"response"] objectForKey:@"status"] isEqualToString:kMessageAPISuccessMessage]) {
+            NSArray *homeMessageArray = [NSArray arrayWithArray:(NSArray *)[responseDict  objectForKey:@"data"]];
+            success(homeMessageArray);
+        } else {
+            failure(nil);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+        NSLog(@"error %@",error);
+    }];
 }
 
 - (void)fetchLeadersVoice {

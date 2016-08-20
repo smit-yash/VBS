@@ -12,15 +12,19 @@
 @implementation HomeViewController {
 
 	__weak IBOutlet UITableView *homeTableView;
+    NSArray *homeMessageArray;
 }
 
 #pragma mark - Utility
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    [[WebServices new] loginWithPhoneNumber:@"1111111111"];
+    [[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
+        NSLog(@"response %@",responseArray);
+    } failure:^(NSError *error) {
+        NSLog(@"eoor %@",error);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

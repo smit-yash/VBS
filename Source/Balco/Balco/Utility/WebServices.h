@@ -4,7 +4,7 @@
 
 - (void)loginWithPhoneNumber:(NSString *)phoneNumber;
 - (void)verifyOTP:(NSString *)otp;
-- (void)fetchHomeMessageWithId:(NSInteger)id;
+- (void)fetchHomeMessageSuccess:(void (^)(NSArray *responseArray))success failure:(void (^)(NSError *error))failure;
 - (void)fetchLeadersVoice;
 - (void)fetchCategories;
 - (void)fetchPDFsForCategoryId:(NSInteger)categoryId;
