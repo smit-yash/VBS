@@ -9,6 +9,6 @@
 - (void)fetchCategoriesSuccess:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure;
 - (void)fetchPDFsForCategoryId:(NSString *)categoryId success:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure;
 - (void)fetchScoresSuccess:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure;
-- (void)fetchQuizSuccess:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure;
+- (void)fetchQuizSuccess:(void (^)(NSString *htmlString))success failure:(void (^)(NSError *error))failure;
 
 @end

@@ -133,7 +133,7 @@
 - (void)fetchScoresSuccess:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure {
     [self initializeManager];
     
-    NSString *urlString = [self urlStringForEndpoint:kPDFsEndpoint];
+    NSString *urlString = [self urlStringForEndpoint:kScoresEndpoint];
     
     [manager POST:urlString parameters:nil constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
@@ -144,15 +144,17 @@
     }];
 }
 
-- (void)fetchQuizSuccess:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure {
-    NSString *urlString = [self urlStringForEndpoint:kPDFsEndpoint];
+- (void)fetchQuizSuccess:(void (^)(NSString *htmlString))success failure:(void (^)(NSError *error))failure {
+    [self initializeManager];
+
+    NSString *urlString = [self urlStringForEndpoint:kQuizEndpoint];
     NSString *registeredMobileNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredMobileNumber"];
 
     urlString = [NSString stringWithFormat:@"%@?mobile=%@",urlString,registeredMobileNumber];
     
     [manager POST:urlString parameters:nil constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
-        success(responseDict);
+        NSString *htmlString = [[NSString alloc] initWithData:responseObject encoding:NSASCIIStringEncoding];// [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        success(htmlString);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
         NSLog(@"error %@",error);
