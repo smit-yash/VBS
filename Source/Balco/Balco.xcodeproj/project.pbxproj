@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		131BAC6E339B359313410D22 /* libPods-Balco.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8096D604E91F4981FB61956C /* libPods-Balco.a */; };
+		9370324A1D683A0C001C673E /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032491D683A0C001C673E /* OTPViewController.m */; };
+		9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9370324E1D683CC6001C673E /* LaunchScreenViewController.m */; };
+		937032521D683E88001C673E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032511D683E88001C673E /* LoginViewController.m */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
 		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
 		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
 		DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9801D678A0F006BBA45 /* AppDelegate.m */; };
 		DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9851D678A0F006BBA45 /* Main.storyboard */; };
 		DBA8F9891D678A0F006BBA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9881D678A0F006BBA45 /* Assets.xcassets */; };
-		DBA8F98C1D678A0F006BBA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */; };
 		DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9981D678A99006BBA45 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +24,12 @@
 		1A38B73702CDDD995E1F99C4 /* Pods-Balco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balco.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balco/Pods-Balco.debug.xcconfig"; sourceTree = "<group>"; };
 		7D9E9089352874819AA410AC /* Pods-Balco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balco.release.xcconfig"; path = "Pods/Target Support Files/Pods-Balco/Pods-Balco.release.xcconfig"; sourceTree = "<group>"; };
 		8096D604E91F4981FB61956C /* libPods-Balco.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Balco.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		937032481D683A0C001C673E /* OTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPViewController.h; sourceTree = "<group>"; };
+		937032491D683A0C001C673E /* OTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPViewController.m; sourceTree = "<group>"; };
+		9370324D1D683CC6001C673E /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
+		9370324E1D683CC6001C673E /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
+		937032501D683E88001C673E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		937032511D683E88001C673E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DB066B981D67A9EC00162079 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
@@ -32,7 +40,6 @@
 		DBA8F9801D678A0F006BBA45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DBA8F9861D678A0F006BBA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBA8F9881D678A0F006BBA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DBA8F98B1D678A0F006BBA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA8F98D1D678A0F006BBA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA8F9971D678A99006BBA45 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DBA8F9981D678A99006BBA45 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -96,7 +103,6 @@
 				DBA8F9801D678A0F006BBA45 /* AppDelegate.m */,
 				DBA8F9851D678A0F006BBA45 /* Main.storyboard */,
 				DBA8F9881D678A0F006BBA45 /* Assets.xcassets */,
-				DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */,
 				DBA8F98D1D678A0F006BBA45 /* Info.plist */,
 				DBA8F97C1D678A0F006BBA45 /* Supporting Files */,
 			);
@@ -140,6 +146,12 @@
 			children = (
 				DBA8F9971D678A99006BBA45 /* HomeViewController.h */,
 				DBA8F9981D678A99006BBA45 /* HomeViewController.m */,
+				937032481D683A0C001C673E /* OTPViewController.h */,
+				937032491D683A0C001C673E /* OTPViewController.m */,
+				9370324D1D683CC6001C673E /* LaunchScreenViewController.h */,
+				9370324E1D683CC6001C673E /* LaunchScreenViewController.m */,
+				937032501D683E88001C673E /* LoginViewController.h */,
+				937032511D683E88001C673E /* LoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 				DBA8F9771D678A0F006BBA45 /* Resources */,
 				6B2FA4706087288C74D53E5D /* [CP] Embed Pods Frameworks */,
 				3E7EA15ADB9B601A07A14C25 /* [CP] Copy Pods Resources */,
+				8FBAA753B1763D4ADF1D65FD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +242,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA8F98C1D678A0F006BBA45 /* LaunchScreen.storyboard in Resources */,
 				DBA8F9891D678A0F006BBA45 /* Assets.xcassets in Resources */,
 				DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +280,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Balco/Pods-Balco-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8FBAA753B1763D4ADF1D65FD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Balco/Pods-Balco-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A53BC7CBFA50C9D663B7421B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937032521D683E88001C673E /* LoginViewController.m in Sources */,
 				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
+				9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */,
 				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,
+				9370324A1D683A0C001C673E /* OTPViewController.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
 				DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */,
 				DBA8F99C1D678A99006BBA45 /* HomeViewController.m in Sources */,
@@ -307,14 +337,6 @@
 				DBA8F9861D678A0F006BBA45 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DBA8F98A1D678A0F006BBA45 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBA8F98B1D678A0F006BBA45 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,7 +429,7 @@
 			baseConfigurationReference = 1A38B73702CDDD995E1F99C4 /* Pods-Balco.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Balco/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,7 +443,7 @@
 			baseConfigurationReference = 7D9E9089352874819AA410AC /* Pods-Balco.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Balco/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
