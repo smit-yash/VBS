@@ -1,11 +1,3 @@
-//
-//  SimpleTableViewCell.m
-//  Balco
-//
-//  Created by optimusmac-12 on 21/08/16.
-//  Copyright © 2016 sy. All rights reserved.
-//
-
 #import "SimpleTableViewCell.h"
 
 @implementation SimpleTableViewCell
