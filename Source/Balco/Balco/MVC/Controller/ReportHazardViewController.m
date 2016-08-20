@@ -7,12 +7,13 @@
 @end
 
 @implementation ReportHazardViewController {
-    
+    UIAlertView *alert;
     __weak IBOutlet UILabel *typeLabel;
     __weak IBOutlet UILabel *locationLabel;
     __weak IBOutlet UITextView *descriptionTextView;
     __weak IBOutlet UITableView *typeTableView;
     __weak IBOutlet UITableView *locationTableView;
+    __weak IBOutlet UIButton *cameraIconOutlet;
     
     NSArray *typeArray;
     NSArray *locationsArray;
@@ -35,7 +36,6 @@
     
     typeArray = [[NSArray alloc] initWithObjects:@"Type",@"Unsafe Act",@"Unsafe Condition",@"Environmental Incident",@"Positive Act",@"Positive Condition", nil];
     locationsArray = [[NSArray alloc] initWithObjects:@"Location",@"1200 MW PP",@"Bake Oven 1",@"Bake Oven 2",@"BOP FLA",@"BOP HMA",@"CH 2",@"CH 3",@"CPP 540 MW",@"CPP1",@"Foundry",@"GAP 1",@"GAP 2",@"Potline 1",@"Potline 2",@"Rodding 1",@"Rodding 2",@"SRS", nil];
-
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -69,6 +69,7 @@
 #pragma mark - Button Actions
 
 - (IBAction)cameraButtonAction:(id)sender {
+    [self showAlertForPhotos];
 }
 - (IBAction)typeButtonAction:(id)sender {
     [typeTableView reloadData];
@@ -184,5 +185,52 @@
 
 - (void)dismissKeyboard {
     [descriptionTextView resignFirstResponder];
+}
+
+- (void)showAlertForPhotos {
+    alert = [[UIAlertView alloc] initWithTitle: @"Add Photo!"
+                                                    message: nil
+                                                   delegate: self
+                                          cancelButtonTitle: NSLocalizedString(@"Cancel", nil)
+                                          otherButtonTitles: NSLocalizedString(@"Camera", nil),NSLocalizedString(@"Gallery", nil), nil];
+    
+    [alert setTag:101];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (alertView.tag == 101) {
+        if (buttonIndex == 1) {
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+                UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Camera" message:@"Unable to start Camera" delegate:nil                                                                                                                                                                                                 cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [myAlertView show];
+            } else {
+                UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+                picker.delegate = self;
+                picker.allowsEditing = YES;
+                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                [self presentViewController:picker animated:YES completion:NULL];
+            }
+        } else if (buttonIndex == 2){
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:picker animated:YES completion:NULL];
+        }
+    }
+}
+
+#pragma mark - Image Picker Controller delegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    [cameraIconOutlet setImage:chosenImage forState:UIControlStateNormal];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
