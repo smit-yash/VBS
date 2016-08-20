@@ -13,7 +13,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Me7-h6-GPf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.16078431369999999" green="0.34509803919999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.16078431369999999" green="0.34509803919999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -553,7 +554,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Balco Sustainability" id="T9V-yC-eAW">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="jka-4E-lpr"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Xmf-P4-qxP"/>
                     </navigationItem>
                     <connections>
                         <outlet property="homeTableView" destination="a7Y-Qh-9Ih" id="D7s-pZ-ukX"/>
@@ -888,7 +889,9 @@
                         <outlet property="webView" destination="WZX-5S-XRO" id="4gE-Vg-TYL"/>
                     </connections>
                 </viewController>
-                <navigationItem title="Quiz" id="369-m4-pyJ"/>
+                <navigationItem title="Quiz" id="369-m4-pyJ">
+                    <barButtonItem key="backBarButtonItem" title="Back" id="peC-5R-jMH"/>
+                </navigationItem>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLy-5a-ZOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1344" y="-198"/>

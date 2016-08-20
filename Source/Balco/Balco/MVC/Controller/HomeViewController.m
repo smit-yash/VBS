@@ -19,6 +19,23 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    imageView.image = [UIImage imageNamed:@"Logo"];
+    imageView.tintColor =[UIColor whiteColor];
+    
+    UIView *iv = [[UIView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width,self.navigationController.navigationBar.frame.size.height)];
+    [iv setBackgroundColor:[UIColor clearColor]];
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width,self.navigationController.navigationBar.frame.size.height)];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = @"Balco Sustainability";
+    [titleLabel setFont:[UIFont systemFontOfSize:21 weight:0.5]];
+    [iv addSubview:titleLabel];
+    [iv addSubview:imageView];
+    self.navigationItem.titleView = iv;
+
+    
 	[[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
 	  homeMessageArray = responseArray;
 	  [homeTableView reloadData];
@@ -32,6 +49,9 @@
 	[super viewWillAppear:animated];
 	[self.navigationController setNavigationBarHidden:NO animated:NO];
 	self.navigationItem.hidesBackButton = YES;
+    
+    
+    
 }
 
 #pragma mark - TableView

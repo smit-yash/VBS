@@ -8,7 +8,7 @@
 @end
 
 @implementation QuizViewController {
-    
+
     __weak IBOutlet UIWebView *webView;
 }
 
@@ -22,6 +22,9 @@
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+    
+    self.navigationItem.backBarButtonItem.title = @"Back";
+
 }
 
 #pragma mark - Web View Delegate

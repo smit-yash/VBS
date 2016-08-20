@@ -1,51 +1,56 @@
 #import "PoliciesTableViewCell.h"
 #import "VSAPTableViewCell.h"
 #import "VSAPViewController.h"
+#import "WebServices.h"
 
 #define kSmallTableViewCellHeight 60.0f
 #define kLargeTableViewCellHeight 80.0f
 
-@implementation VSAPViewController
+@implementation VSAPViewController {
+    NSArray *scoreArray;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    
+    [[WebServices new] fetchScoresSuccess:^(NSDictionary *responseDict) {
+        if ([responseDict objectForKey:@"data"]) {
+            scoreArray = [NSArray arrayWithArray:(NSArray *)[responseDict objectForKey:@"data"]];
+            [self.tableView reloadData];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    self.navigationItem.backBarButtonItem.title = @"Back";
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
     heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (indexPath.row == 0) {
-		return kSmallTableViewCellHeight;
-	} else {
+	
 		return kLargeTableViewCellHeight;
-	}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-	return 10;
+	return scoreArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
 	 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (indexPath.row == 0) {
-		PoliciesTableViewCell *cell = [tableView
-		    dequeueReusableCellWithIdentifier:@"PoliciesCell"];
-		cell.containerView.layer.cornerRadius = 5.0f;
-		cell.titleLabel.text = @"An Event";
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		return cell;
-	} else {
 
 		VSAPTableViewCell *cell =
 		    [tableView dequeueReusableCellWithIdentifier:@"VSAPCell"];
-		cell.detailLabel.text = @"1200 MW PP";
-		cell.scoreValueLabel.text = @"7.57";
+        NSDictionary *dict = [scoreArray objectAtIndex:indexPath.row];
+        
+		cell.detailLabel.text = [dict objectForKey:@"Department"];
+		cell.scoreValueLabel.text = [dict objectForKey:@"Score"];
 		cell.smileyImageView.image =
-		    [UIImage imageNamed:@"satisfactory.jpg"];
+		    [UIImage imageNamed:[dict objectForKey:@"Remark"]];
 		cell.containerView.layer.cornerRadius = 5.0f;
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		return cell;
-	}
+//	}
 }
 
 - (void)tableView:(UITableView *)tableView
