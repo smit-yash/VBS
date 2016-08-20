@@ -1,6 +1,5 @@
 #import "HomeTableViewCell.h"
 #import "HomeViewController.h"
-#import "HomeTableViewCell.h"
 #import "WebServices.h"
 
 #define kTableViewCellHeight 80.0f
@@ -12,19 +11,20 @@
 @implementation HomeViewController {
 
 	__weak IBOutlet UITableView *homeTableView;
-    NSArray *homeMessageArray;
+	NSArray *homeMessageArray;
 }
 
 #pragma mark - Utility
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
-        NSLog(@"response %@",responseArray);
-    } failure:^(NSError *error) {
-        NSLog(@"eoor %@",error);
-    }];
+	[super viewDidLoad];
+
+	[[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
+	  NSLog(@"response %@", responseArray);
+	}
+	    failure:^(NSError *error) {
+	      NSLog(@"eoor %@", error);
+	    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,16 +70,18 @@
 
 #pragma mark - Button Actions
 
-- (IBAction)leadersVoiceButtonAction:(id)sender {
-}
-
 - (IBAction)policiesButtonAction:(id)sender {
-}
-
-- (IBAction)quizButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"PoliciesSegue" sender:self];
 }
 
 - (IBAction)standardButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"StandardSegue" sender:self];
+}
+
+- (IBAction)leadersVoiceButtonAction:(id)sender {
+}
+
+- (IBAction)quizButtonAction:(id)sender {
 }
 
 - (IBAction)scoreButtonAction:(id)sender {
