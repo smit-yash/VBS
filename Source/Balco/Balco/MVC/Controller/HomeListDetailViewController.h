@@ -4,6 +4,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIImageView *homeListImageView;
-@property(nonatomic, strong) NSString *dataSourceString;
+@property (strong, nonatomic) NSDictionary *dict;
 
 @end

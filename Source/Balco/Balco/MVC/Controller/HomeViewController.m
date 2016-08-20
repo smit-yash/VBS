@@ -1,6 +1,7 @@
 #import "HomeTableViewCell.h"
 #import "HomeViewController.h"
 #import "WebServices.h"
+#import "HomeListDetailViewController.h"
 
 #define kTableViewCellHeight 80.0f
 
@@ -49,9 +50,17 @@
 	[super viewWillAppear:animated];
 	[self.navigationController setNavigationBarHidden:NO animated:NO];
 	self.navigationItem.hidesBackButton = YES;
-    
-    
-    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"MainListSegue"]) {
+        HomeListDetailViewController *vc = segue.destinationViewController;
+        NSIndexPath *selectedIndexPath = [homeTableView indexPathForSelectedRow];
+        
+        NSDictionary *dict = [homeMessageArray objectAtIndex:selectedIndexPath.row];
+        
+        vc.dict = dict;
+    }
 }
 
 #pragma mark - TableView

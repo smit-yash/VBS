@@ -2,6 +2,7 @@
 #import "WebServices.h"
 
 #define kQuizAPISuccessMessage @"success"
+#define kBaseURL @"http://bsapp.app6.in"
 
 @interface QuizViewController ()<UIWebViewDelegate>
 
@@ -15,7 +16,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[WebServices new] fetchQuizSuccess:^(NSString *htmlString) {
-        NSLog(@"%@",htmlString);
         if (htmlString.length) {
             [webView loadHTMLString:htmlString baseURL: [[NSBundle mainBundle] bundleURL]];
         }
