@@ -18,10 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //For Ankit : Use this for checking login
-    NSString *savedValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredMobileNumber"];
-    NSLog(@"saved %@",savedValue);
-    
     return YES;
 }
 

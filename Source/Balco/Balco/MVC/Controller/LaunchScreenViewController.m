@@ -7,12 +7,14 @@
 
 @implementation LaunchScreenViewController {
 	LoginViewController *loginViewController;
+    __weak IBOutlet UIImageView *launchImage;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-	sleep(2);
+    launchImage.image = [UIImage imageNamed:@"launchImage"];
+	sleep(1);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -21,10 +23,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	if (0) {
-		[self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
-	} else {
+    NSString *registeredMobileNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredMobileNumber"];
+    NSString *registeredOTP = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredOTP"];
+
+	if (registeredMobileNumber.length && registeredOTP.length) {
 		[self performSegueWithIdentifier:@"MainViewSegue" sender:self];
+	} else {
+		[self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
 	}
 }
 #pragma mark - Navigation

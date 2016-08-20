@@ -21,7 +21,8 @@
     [super viewDidLoad];
     
     [[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
-        NSLog(@"response %@",responseArray);
+        homeMessageArray = responseArray;
+        [homeTableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"eoor %@",error);
     }];
@@ -43,7 +44,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
 
-	return 3;
+	return homeMessageArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -52,10 +53,12 @@
 	HomeTableViewCell *cell =
 	    [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell"];
 
+    NSDictionary *currentMessage = homeMessageArray[indexPath.row];
+    
 	cell.containerView.layer.cornerRadius = 10.0f;
-	cell.dateLabel.text = @"13 Aug, 2013";
-	cell.titleLabel.text = @"An Event";
-	cell.descriptionLabel.text = @"Some Description";
+	cell.dateLabel.text = [currentMessage objectForKey:@"IssueDate"];
+	cell.titleLabel.text = [currentMessage objectForKey:@"Title"];
+	cell.descriptionLabel.text = [currentMessage objectForKey:@"Msg"];
 
 	return cell;
 }

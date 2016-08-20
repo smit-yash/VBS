@@ -1,17 +1,8 @@
-//
-//  OTPViewController.m
-//  Balco
-//
-//  Created by optimusmac4 on 8/20/16.
-//  Copyright © 2016 sy. All rights reserved.
-//
-
 #import "HomeViewController.h"
 #import "OTPViewController.h"
+#import "WebServices.h"
 
-@interface OTPViewController ()
-
-@end
+#define kVerifyOTPSuccessMessage @"otp_verified"
 
 @implementation OTPViewController {
 	HomeViewController *homeViewController;
@@ -26,14 +17,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	// Do any additional setup after loading the view.
-	[self initializeTextFieldsBackGround];
-	self.navigationItem.hidesBackButton = NO;
-}
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+    [self initializeTextFieldsBackGround];
+	self.navigationItem.hidesBackButton = NO;
 }
 
 - (void)initializeTextFieldsBackGround {
@@ -49,7 +35,20 @@
 }
 
 - (IBAction)submitButtonAction:(id)sender {
-	[self performSegueWithIdentifier:@"AfterLoginSegue" sender:self];
+    NSString *registeredMobileNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredMobileNumber"];
+
+    [[WebServices new] verifyOTP:@"1111" forMobileNumber:registeredMobileNumber success:^(NSDictionary *responseDict) {
+        if ([[[responseDict objectForKey:@"response"] objectForKey:@"status"] isEqualToString:kVerifyOTPSuccessMessage]) {
+            [[NSUserDefaults standardUserDefaults] setObject:@"1111" forKey:@"registeredOTP"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self performSegueWithIdentifier:@"AfterLoginSegue" sender:self];
+        } else {
+            NSString *errorMessage = [[responseDict objectForKey:@"response"] objectForKey:@"status"];
+            NSLog(@"error %@",errorMessage);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"error %@",error);
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
