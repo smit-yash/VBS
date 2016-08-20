@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="haC-Jg-IaQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="haC-Jg-IaQ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -13,8 +13,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Me7-h6-GPf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.34509803919999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.34509803919999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -51,7 +51,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="Jzi-n5-gKg"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="LeadersVoice">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -74,7 +74,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="l4S-Ky-QjG"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="Policies">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -97,7 +97,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="cf5-7g-Q6l"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="Quiz">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -176,7 +176,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="AP3-p0-ySa"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="Standard">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -199,7 +199,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="Ggc-r5-A5J"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="Score">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -222,7 +222,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="jBA-YQ-fo9"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" backgroundImage="Hazard">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="default">
@@ -416,8 +416,12 @@
                                                         <constraint firstItem="VIf-9D-Orl" firstAttribute="top" secondItem="bBV-YU-pKC" secondAttribute="bottom" id="FTM-cQ-9mi"/>
                                                         <constraint firstItem="bBV-YU-pKC" firstAttribute="leading" secondItem="2oW-2c-53w" secondAttribute="leading" id="Qqr-Oi-YxR"/>
                                                         <constraint firstItem="KLI-BG-CMQ" firstAttribute="leading" secondItem="2oW-2c-53w" secondAttribute="leading" constant="10" id="aFG-yX-i8j"/>
-                                                        <constraint firstAttribute="trailing" secondItem="KLI-BG-CMQ" secondAttribute="trailing" id="bYg-7j-kMj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="VIf-9D-Orl" secondAttribute="trailing" id="jCR-6A-f3J"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KLI-BG-CMQ" secondAttribute="trailing" id="bYg-7j-kMj">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="trailing" secondItem="VIf-9D-Orl" secondAttribute="trailing" id="jCR-6A-f3J">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                        </constraint>
                                                         <constraint firstItem="VIf-9D-Orl" firstAttribute="leading" secondItem="2oW-2c-53w" secondAttribute="leading" constant="10" id="meI-Xc-a0J"/>
                                                     </constraints>
                                                     <variation key="default">
@@ -553,6 +557,7 @@
                         <outlet property="homeTableView" destination="a7Y-Qh-9Ih" id="D7s-pZ-ukX"/>
                         <segue destination="xtP-nc-Dyh" kind="show" identifier="PoliciesSegue" id="oPq-sn-Y6l"/>
                         <segue destination="LsY-Ey-GKI" kind="show" identifier="StandardSegue" id="UqJ-za-0aN"/>
+                        <segue destination="PtZ-O8-59f" kind="show" identifier="quizSegue" id="XJI-Sm-weV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -571,10 +576,10 @@
                         <color key="sectionIndexBackgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoliciesCell" rowHeight="60" id="Ljv-vG-yYS" customClass="PoliciesTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ljv-vG-yYS" id="iT8-fm-BPm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLa-rd-1jJ">
@@ -689,6 +694,23 @@
             </objects>
             <point key="canvasLocation" x="376.5" y="-1046.25"/>
         </scene>
+        <!--Leaders Voice View Controller-->
+        <scene sceneID="nkE-SO-fAW">
+            <objects>
+                <viewController id="9Zq-iY-gTt" customClass="LeadersVoiceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNH-2l-jHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="b39-29-I0a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lge-RY-KUz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3B9-R1-6Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1311" y="-1045.5"/>
+        </scene>
         <!--Vedanta Sustainability Standard-->
         <scene sceneID="gre-zp-zXI">
             <objects>
@@ -701,10 +723,10 @@
                         <color key="sectionIndexBackgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PoliciesCell" rowHeight="60" id="PXZ-FM-KZH" customClass="PoliciesTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PXZ-FM-KZH" id="jRt-ee-NkK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZC-M9-IVD">
@@ -740,8 +762,8 @@
                                                     <exclude reference="h7l-Ha-Pxl"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="Sgh-sA-8zb"/>
                                                     <exclude reference="4uF-Kd-1gc"/>
+                                                    <exclude reference="Sgh-sA-8zb"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -749,8 +771,8 @@
                                                     <include reference="h7l-Ha-Pxl"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="Sgh-sA-8zb"/>
                                                     <include reference="4uF-Kd-1gc"/>
+                                                    <include reference="Sgh-sA-8zb"/>
                                                 </mask>
                                             </variation>
                                         </view>
@@ -778,11 +800,11 @@
                                             <exclude reference="OZC-M9-IVD"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="Guz-8C-Jll"/>
                                             <exclude reference="3KH-w4-QhU"/>
-                                            <exclude reference="tQt-6c-tDw"/>
-                                            <exclude reference="j4h-0p-zyp"/>
+                                            <exclude reference="Guz-8C-Jll"/>
                                             <exclude reference="XbD-b7-kqY"/>
+                                            <exclude reference="j4h-0p-zyp"/>
+                                            <exclude reference="tQt-6c-tDw"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -790,11 +812,11 @@
                                             <include reference="OZC-M9-IVD"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="Guz-8C-Jll"/>
                                             <include reference="3KH-w4-QhU"/>
-                                            <exclude reference="tQt-6c-tDw"/>
-                                            <include reference="j4h-0p-zyp"/>
+                                            <include reference="Guz-8C-Jll"/>
                                             <include reference="XbD-b7-kqY"/>
+                                            <include reference="j4h-0p-zyp"/>
+                                            <exclude reference="tQt-6c-tDw"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -818,6 +840,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfZ-YV-Phu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376.5" y="-216.75"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="sVF-6B-3vH">
+            <objects>
+                <viewController id="PtZ-O8-59f" customClass="QuizViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1G2-TK-ZMM"/>
+                        <viewControllerLayoutGuide type="bottom" id="WDJ-Vp-lkv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k0N-JN-cnp">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZX-5S-XRO">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="PtZ-O8-59f" id="cjo-vL-wIR"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WZX-5S-XRO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="WZX-5S-XRO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="WZX-5S-XRO" id="4gE-Vg-TYL"/>
+                    </connections>
+                </viewController>
+                <navigationItem title="Quiz" id="369-m4-pyJ"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLy-5a-ZOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="-198"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="MUg-uH-a2R">
@@ -1014,25 +1079,56 @@
         <scene sceneID="Kdu-AZ-V2j">
             <objects>
                 <viewController id="E4h-FF-BDk" customClass="LaunchScreenViewController" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon.jpg" id="sro-ne-By0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UlT-TH-kqQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gAT-9B-W34"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTG-mS-eJM">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wuH-vv-JAK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wuH-vv-JAK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wuH-vv-JAK"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <navigationItem key="navigationItem" id="hAK-cC-Esi"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="MainViewSegue" id="wNn-Te-jkG"/>
-                        <segue destination="vlx-Ht-UhG" kind="show" identifier="LoginViewSegue" id="9Ch-Ny-CMI"/>
+                        <outlet property="launchImage" destination="wuH-vv-JAK" id="CwF-87-0Gg"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MainViewSegue" animates="NO" id="wNn-Te-jkG"/>
+                        <segue destination="vlx-Ht-UhG" kind="show" identifier="LoginViewSegue" animates="NO" id="9Ch-Ny-CMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCY-Pd-fK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="814"/>
+            <point key="canvasLocation" x="-1389" y="813.75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="app_icon.jpg" width="1280" height="1024"/>
+        <image name="Hazard" width="133" height="120"/>
+        <image name="LeadersVoice" width="133" height="120"/>
+        <image name="Policies" width="134" height="120"/>
+        <image name="Quiz" width="133" height="120"/>
+        <image name="Score" width="134" height="120"/>
+        <image name="Standard" width="133" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qcj-ly-ygO"/>
+        <segue reference="wNn-Te-jkG"/>
     </inferredMetricsTieBreakers>
 </document>

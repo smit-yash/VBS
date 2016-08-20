@@ -14,6 +14,8 @@
 		9370324A1D683A0C001C673E /* OTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032491D683A0C001C673E /* OTPViewController.m */; };
 		9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9370324E1D683CC6001C673E /* LaunchScreenViewController.m */; };
 		937032521D683E88001C673E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937032511D683E88001C673E /* LoginViewController.m */; };
+		DB0248481D687B2D00322DB7 /* LeadersVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0248471D687B2D00322DB7 /* LeadersVoiceViewController.m */; };
+		DB02484B1D687C7000322DB7 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02484A1D687C7000322DB7 /* QuizViewController.m */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
 		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
 		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
@@ -39,11 +41,15 @@
 		9370324E1D683CC6001C673E /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
 		937032501D683E88001C673E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		937032511D683E88001C673E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DB0248461D687B2D00322DB7 /* LeadersVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeadersVoiceViewController.h; sourceTree = "<group>"; };
+		DB0248471D687B2D00322DB7 /* LeadersVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeadersVoiceViewController.m; sourceTree = "<group>"; };
+		DB0248491D687C7000322DB7 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		DB02484A1D687C7000322DB7 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		DB066B981D67A9EC00162079 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		DB5FB3591D67C50D00B44069 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
-		DBA8F9791D678A0F006BBA45 /* Balco Sustainability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balco Sustainability.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA8F9791D678A0F006BBA45 /* Balco Sustainability App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balco Sustainability App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA8F97D1D678A0F006BBA45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA8F97F1D678A0F006BBA45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBA8F9801D678A0F006BBA45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,7 +102,7 @@
 		DBA8F97A1D678A0F006BBA45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBA8F9791D678A0F006BBA45 /* Balco Sustainability.app */,
+				DBA8F9791D678A0F006BBA45 /* Balco Sustainability App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,10 +165,14 @@
 				937032491D683A0C001C673E /* OTPViewController.m */,
 				9370324D1D683CC6001C673E /* LaunchScreenViewController.h */,
 				9370324E1D683CC6001C673E /* LaunchScreenViewController.m */,
+				DB0248461D687B2D00322DB7 /* LeadersVoiceViewController.h */,
+				DB0248471D687B2D00322DB7 /* LeadersVoiceViewController.m */,
 				937032501D683E88001C673E /* LoginViewController.h */,
 				937032511D683E88001C673E /* LoginViewController.m */,
 				9306EE601D6862CB0063E614 /* PoliciesViewController.h */,
 				9306EE611D6862CB0063E614 /* PoliciesViewController.m */,
+				DB0248491D687C7000322DB7 /* QuizViewController.h */,
+				DB02484A1D687C7000322DB7 /* QuizViewController.m */,
 				9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */,
 				9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */,
 			);
@@ -217,7 +227,7 @@
 			);
 			name = Balco;
 			productName = Balco;
-			productReference = DBA8F9791D678A0F006BBA45 /* Balco Sustainability.app */;
+			productReference = DBA8F9791D678A0F006BBA45 /* Balco Sustainability App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,8 +346,10 @@
 				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
 				9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */,
 				9306EE621D6862CB0063E614 /* PoliciesViewController.m in Sources */,
+				DB0248481D687B2D00322DB7 /* LeadersVoiceViewController.m in Sources */,
 				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,
 				9370324A1D683A0C001C673E /* OTPViewController.m in Sources */,
+				DB02484B1D687C7000322DB7 /* QuizViewController.m in Sources */,
 				9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
 				9306EE681D6864130063E614 /* PoliciesTableViewCell.m in Sources */,
@@ -452,7 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sy.Balco;
-				PRODUCT_NAME = "Balco Sustainability";
+				PRODUCT_NAME = "Balco Sustainability App";
 			};
 			name = Debug;
 		};
@@ -466,7 +478,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sy.Balco;
-				PRODUCT_NAME = "Balco Sustainability";
+				PRODUCT_NAME = "Balco Sustainability App";
 			};
 			name = Release;
 		};

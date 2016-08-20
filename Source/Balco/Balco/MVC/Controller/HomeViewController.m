@@ -35,8 +35,7 @@
 
 #pragma mark - TableView
 
-- (CGFloat)tableView:(UITableView *)tableView
-    heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	return kTableViewCellHeight;
 }
 
@@ -84,6 +83,7 @@
 }
 
 - (IBAction)quizButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"quizSegue" sender:self];
 }
 
 - (IBAction)scoreButtonAction:(id)sender {

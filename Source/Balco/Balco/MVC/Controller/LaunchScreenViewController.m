@@ -12,9 +12,8 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
+
     launchImage.image = [UIImage imageNamed:@"launchImage"];
-	sleep(1);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
