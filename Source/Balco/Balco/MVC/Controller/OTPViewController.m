@@ -67,14 +67,14 @@
 	    [[NSUserDefaults standardUserDefaults]
 		stringForKey:@"registeredMobileNumber"];
 
-	[[WebServices new] verifyOTP:@"1111"
+    [[WebServices new] verifyOTP:[NSString stringWithFormat:@"%@%@%@%@",_textField1.text, _textField2.text, _textField3.text, _textField4.text]
 	    forMobileNumber:registeredMobileNumber
 	    success:^(NSDictionary *responseDict) {
 	      if ([[[responseDict objectForKey:@"response"]
 		      objectForKey:@"status"]
 		      isEqualToString:kVerifyOTPSuccessMessage]) {
 		      [[NSUserDefaults standardUserDefaults]
-			  setObject:@"1111"
+			  setObject:[NSString stringWithFormat:@"%@%@%@%@",_textField1.text, _textField2.text, _textField3.text, _textField4.text]
 			     forKey:@"registeredOTP"];
 		      [[NSUserDefaults standardUserDefaults] synchronize];
 		      [self performSegueWithIdentifier:@"AfterLoginSegue"

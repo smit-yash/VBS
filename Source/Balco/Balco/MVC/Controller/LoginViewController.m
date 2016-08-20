@@ -54,14 +54,14 @@
 }
 
 - (IBAction)loginButtonAction:(id)sender {
-	[[WebServices new] loginWithPhoneNumber:@"1111111111"
+	[[WebServices new] loginWithPhoneNumber:self.mobileNumberTextField.text
 	    success:^(NSDictionary *responseDict) {
 	      NSLog(@"%@", responseDict);
 	      if ([[[responseDict objectForKey:@"response"]
 		      objectForKey:@"status"]
 		      isEqualToString:kLoginSuccessMessage]) {
 		      [[NSUserDefaults standardUserDefaults]
-			  setObject:@"1111111111"
+			  setObject:self.mobileNumberTextField.text
 			     forKey:@"registeredMobileNumber"];
 		      [[NSUserDefaults standardUserDefaults] synchronize];
 		      [self performSegueWithIdentifier:@"OTPSegue" sender:self];
