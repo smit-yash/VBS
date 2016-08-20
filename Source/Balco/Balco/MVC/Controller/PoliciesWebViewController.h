@@ -2,4 +2,6 @@
 
 @interface PoliciesWebViewController : UIViewController
 
+@property (strong, nonatomic) NSDictionary *selectedDict;
+
 @end

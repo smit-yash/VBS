@@ -13,16 +13,17 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[[WebServices new] fetchQuizSuccess:^(NSString *htmlString) {
-	  NSLog(@"%@", htmlString);
-	  if (htmlString.length) {
-		  [webView loadHTMLString:htmlString
-				  baseURL:[[NSBundle mainBundle] bundleURL]];
-	  }
-	}
-	    failure:^(NSError *error) {
-	      NSLog(@"%@", error);
-	    }];
+    
+    if (self.selectedDict) {
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.selectedDict objectForKey:@"Filename"]]]];
+        self.title = [self.selectedDict objectForKey:@"Title"];
+    } else {
+//        [[WebServices new] fetchPDFsForCategoryId:self.categoryId success:^(NSDictionary *responseDict) {
+//            
+//        } failure:^(NSError *error) {
+//            NSLog(@"%@",error);
+//        }];
+    }
 }
 
 #pragma mark - Web View Delegate

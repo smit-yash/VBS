@@ -23,6 +23,7 @@
         NSLog(@"%@",error);
     }];
     
+    self.title = @"Quiz";
     self.navigationItem.backBarButtonItem.title = @"Back";
 
 }

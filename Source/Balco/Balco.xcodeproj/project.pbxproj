@@ -20,6 +20,7 @@
 		DB0248481D687B2D00322DB7 /* LeadersVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0248471D687B2D00322DB7 /* LeadersVoiceViewController.m */; };
 		DB02484B1D687C7000322DB7 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02484A1D687C7000322DB7 /* QuizViewController.m */; };
 		DB02484E1D6898D800322DB7 /* MsgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02484D1D6898D800322DB7 /* MsgDetailViewController.m */; };
+		DB0248511D68A90800322DB7 /* SustainabilityDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0248501D68A90800322DB7 /* SustainabilityDetailListViewController.m */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
 		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
 		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
@@ -57,6 +58,8 @@
 		DB02484A1D687C7000322DB7 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 		DB02484C1D6898D700322DB7 /* MsgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgDetailViewController.h; sourceTree = "<group>"; };
 		DB02484D1D6898D800322DB7 /* MsgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgDetailViewController.m; sourceTree = "<group>"; };
+		DB02484F1D68A90800322DB7 /* SustainabilityDetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SustainabilityDetailListViewController.h; sourceTree = "<group>"; };
+		DB0248501D68A90800322DB7 /* SustainabilityDetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SustainabilityDetailListViewController.m; sourceTree = "<group>"; };
 		DB066B981D67A9EC00162079 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				DB02484A1D687C7000322DB7 /* QuizViewController.m */,
 				9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */,
 				9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */,
+				DB02484F1D68A90800322DB7 /* SustainabilityDetailListViewController.h */,
+				DB0248501D68A90800322DB7 /* SustainabilityDetailListViewController.m */,
 				9306EE6C1D6876460063E614 /* VSAPViewController.h */,
 				9306EE6D1D6876460063E614 /* VSAPViewController.m */,
 			);
@@ -362,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0248511D68A90800322DB7 /* SustainabilityDetailListViewController.m in Sources */,
 				937032521D683E88001C673E /* LoginViewController.m in Sources */,
 				DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */,
 				9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */,

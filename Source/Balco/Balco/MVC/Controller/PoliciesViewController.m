@@ -1,6 +1,7 @@
 #import "PoliciesTableViewCell.h"
 #import "PoliciesViewController.h"
 #import "WebServices.h"
+#import "PoliciesWebViewController.h"
 
 #define kTableViewCellHeight 60.0f
 
@@ -47,8 +48,19 @@
 
 - (void)tableView:(UITableView *)tableView
     didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[self performSegueWithIdentifier:@"PoliciesWebViewSegue" sender:self];
-	[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [self performSegueWithIdentifier:@"PoliciesWebViewSegue" sender:self];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    PoliciesWebViewController *vc = segue.destinationViewController;
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    
+    NSDictionary *dict = [policiesArray objectAtIndex:selectedIndexPath.row];
+    
+    vc.selectedDict = dict;
+}
+
 
 @end
