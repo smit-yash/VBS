@@ -112,6 +112,8 @@
 }
 
 - (IBAction)reportButtonAction:(id)sender {
+    [self performSegueWithIdentifier:@"reportHazardSegue" sender:self];
+
 }
 
 @end

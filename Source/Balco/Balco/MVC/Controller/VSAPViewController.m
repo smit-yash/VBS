@@ -18,6 +18,7 @@
 		  scoreArray =
 		      [NSArray arrayWithArray:(NSArray *)[responseDict
 						  objectForKey:@"data"]];
+          self.headerViewTitleLabel.text = [scoreArray[0] objectForKey:@"Month"];
 		  [self.tableView reloadData];
 	  }
 	}
@@ -25,6 +26,7 @@
 	      NSLog(@"%@", error);
 	    }];
 	self.navigationItem.backBarButtonItem.title = @"Back";
+    self.title = @"Our VSAP Score Board";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

@@ -23,6 +23,8 @@
 		DB0248511D68A90800322DB7 /* SustainabilityDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0248501D68A90800322DB7 /* SustainabilityDetailListViewController.m */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
 		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
+		DB7FFB731D68C6C60030F71C /* ReportHazardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB721D68C6C60030F71C /* ReportHazardViewController.m */; };
+		DB7FFB761D68DAE40030F71C /* SimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB751D68DAE40030F71C /* SimpleTableViewCell.m */; };
 		DBA8F97E1D678A0F006BBA45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F97D1D678A0F006BBA45 /* main.m */; };
 		DBA8F9811D678A0F006BBA45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8F9801D678A0F006BBA45 /* AppDelegate.m */; };
 		DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F9851D678A0F006BBA45 /* Main.storyboard */; };
@@ -64,6 +66,10 @@
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		DB5FB3591D67C50D00B44069 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
+		DB7FFB711D68C6C60030F71C /* ReportHazardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportHazardViewController.h; sourceTree = "<group>"; };
+		DB7FFB721D68C6C60030F71C /* ReportHazardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportHazardViewController.m; sourceTree = "<group>"; };
+		DB7FFB741D68DAE40030F71C /* SimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewCell.h; sourceTree = "<group>"; };
+		DB7FFB751D68DAE40030F71C /* SimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewCell.m; sourceTree = "<group>"; };
 		DBA8F9791D678A0F006BBA45 /* Balco Sustainability App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Balco Sustainability App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA8F97D1D678A0F006BBA45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBA8F97F1D678A0F006BBA45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 				9306EE731D6896940063E614 /* PoliciesWebViewController.m */,
 				DB0248491D687C7000322DB7 /* QuizViewController.h */,
 				DB02484A1D687C7000322DB7 /* QuizViewController.m */,
+				DB7FFB711D68C6C60030F71C /* ReportHazardViewController.h */,
+				DB7FFB721D68C6C60030F71C /* ReportHazardViewController.m */,
 				9306EE691D6869DD0063E614 /* SustainabilityStandardViewController.h */,
 				9306EE6A1D6869DD0063E614 /* SustainabilityStandardViewController.m */,
 				DB02484F1D68A90800322DB7 /* SustainabilityDetailListViewController.h */,
@@ -216,6 +224,8 @@
 				DB066B991D67A9EC00162079 /* HomeTableViewCell.m */,
 				9306EE661D6864130063E614 /* PoliciesTableViewCell.h */,
 				9306EE671D6864130063E614 /* PoliciesTableViewCell.m */,
+				DB7FFB741D68DAE40030F71C /* SimpleTableViewCell.h */,
+				DB7FFB751D68DAE40030F71C /* SimpleTableViewCell.m */,
 				9306EE6F1D68794D0063E614 /* VSAPTableViewCell.h */,
 				9306EE701D68794D0063E614 /* VSAPTableViewCell.m */,
 			);
@@ -374,11 +384,13 @@
 				9306EE711D68794D0063E614 /* VSAPTableViewCell.m in Sources */,
 				9306EE621D6862CB0063E614 /* PoliciesViewController.m in Sources */,
 				DB0248481D687B2D00322DB7 /* LeadersVoiceViewController.m in Sources */,
+				DB7FFB731D68C6C60030F71C /* ReportHazardViewController.m in Sources */,
 				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,
 				9370324A1D683A0C001C673E /* OTPViewController.m in Sources */,
 				DB02484B1D687C7000322DB7 /* QuizViewController.m in Sources */,
 				9306EE6B1D6869DD0063E614 /* SustainabilityStandardViewController.m in Sources */,
 				DBA8F97E1D678A0F006BBA45 /* main.m in Sources */,
+				DB7FFB761D68DAE40030F71C /* SimpleTableViewCell.m in Sources */,
 				9306EE741D6896940063E614 /* PoliciesWebViewController.m in Sources */,
 				9306EE6E1D6876460063E614 /* VSAPViewController.m in Sources */,
 				9306EE681D6864130063E614 /* PoliciesTableViewCell.m in Sources */,
