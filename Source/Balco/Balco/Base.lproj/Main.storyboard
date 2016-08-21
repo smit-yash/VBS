@@ -2599,7 +2599,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Zvb-Ay-SfF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YpG-vJ-a7q">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-s5-M95">
@@ -2618,7 +2618,7 @@
                                         <rect key="frame" x="0.0" y="156" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARS-4U-HSa" id="xho-fK-qy6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R6-oA-Mit">
@@ -2663,21 +2663,8 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adip" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67K-8o-2xP">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="29" id="Ync-cd-Cel"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="Ync-cd-Cel"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular">
-                                                        <mask key="constraints">
-                                                            <include reference="Ync-cd-Cel"/>
-                                                        </mask>
-                                                    </variation>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -2703,14 +2690,14 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="Dqm-Ir-JTK"/>
-                                                    <exclude reference="j9n-u3-Kif"/>
                                                     <exclude reference="dzR-ct-sLX"/>
+                                                    <exclude reference="j9n-u3-Kif"/>
                                                     <exclude reference="6KD-tB-dBR"/>
                                                     <exclude reference="9Kf-VF-E1z"/>
                                                     <exclude reference="r3z-eS-qF0"/>
+                                                    <exclude reference="NMm-rZ-Gul"/>
                                                     <exclude reference="bvg-8G-zoS"/>
                                                     <exclude reference="w2k-KC-Rhk"/>
-                                                    <exclude reference="NMm-rZ-Gul"/>
                                                     <exclude reference="x59-b3-tPy"/>
                                                 </mask>
                                             </variation>
@@ -2722,14 +2709,14 @@
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="Dqm-Ir-JTK"/>
-                                                    <include reference="j9n-u3-Kif"/>
                                                     <include reference="dzR-ct-sLX"/>
+                                                    <include reference="j9n-u3-Kif"/>
                                                     <include reference="6KD-tB-dBR"/>
                                                     <include reference="9Kf-VF-E1z"/>
                                                     <include reference="r3z-eS-qF0"/>
+                                                    <include reference="NMm-rZ-Gul"/>
                                                     <include reference="bvg-8G-zoS"/>
                                                     <include reference="w2k-KC-Rhk"/>
-                                                    <include reference="NMm-rZ-Gul"/>
                                                     <include reference="x59-b3-tPy"/>
                                                 </mask>
                                             </variation>
@@ -2762,10 +2749,10 @@
                                 <exclude reference="cXg-s5-M95"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="rGn-7Z-shm"/>
                                 <exclude reference="7Vp-Dn-RkJ"/>
                                 <exclude reference="PdG-VC-na5"/>
                                 <exclude reference="fe1-fu-U3L"/>
-                                <exclude reference="rGn-7Z-shm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -2773,10 +2760,10 @@
                                 <include reference="cXg-s5-M95"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="rGn-7Z-shm"/>
                                 <include reference="7Vp-Dn-RkJ"/>
                                 <include reference="PdG-VC-na5"/>
                                 <include reference="fe1-fu-U3L"/>
-                                <include reference="rGn-7Z-shm"/>
                             </mask>
                         </variation>
                     </view>
