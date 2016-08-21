@@ -17,13 +17,12 @@
     if (self.selectedDict) {
         [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.selectedDict objectForKey:@"Filename"]]]];
         self.title = [self.selectedDict objectForKey:@"Title"];
-    } else {
-//        [[WebServices new] fetchPDFsForCategoryId:self.categoryId success:^(NSDictionary *responseDict) {
-//            
-//        } failure:^(NSError *error) {
-//            NSLog(@"%@",error);
-//        }];
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 #pragma mark - Web View Delegate
@@ -31,6 +30,7 @@
 - (BOOL)webView:(UIWebView *)webView
     shouldStartLoadWithRequest:(NSURLRequest *)request
 		navigationType:(UIWebViewNavigationType)navigationType {
+    [DisplayUtil showSpinnerOn:self above:self.view];
 	return YES;
 }
 
@@ -40,11 +40,13 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	NSLog(@"finished");
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (void)webView:(UIWebView *)webView
     didFailLoadWithError:(nullable NSError *)error {
 	NSLog(@"%@", error);
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 @end

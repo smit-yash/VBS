@@ -26,6 +26,7 @@
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
 		DB08425D1D6928AA0067027E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F98D1D678A0F006BBA45 /* Info.plist */; };
 		DB08425F1D6930E50067027E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08425E1D6930E50067027E /* Launch Screen.storyboard */; };
+		DB349DE41D69DFA0004211CC /* DisplayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DB349DE31D69DFA0004211CC /* DisplayUtil.m */; };
 		DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FB3591D67C50D00B44069 /* WebServices.m */; };
 		DB7FFB731D68C6C60030F71C /* ReportHazardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB721D68C6C60030F71C /* ReportHazardViewController.m */; };
 		DB7FFB761D68DAE40030F71C /* SimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB751D68DAE40030F71C /* SimpleTableViewCell.m */; };
@@ -73,6 +74,8 @@
 		DB066B981D67A9EC00162079 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		DB066B991D67A9EC00162079 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DB08425E1D6930E50067027E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		DB349DE21D69DFA0004211CC /* DisplayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUtil.h; sourceTree = "<group>"; };
+		DB349DE31D69DFA0004211CC /* DisplayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUtil.m; sourceTree = "<group>"; };
 		DB5FB3581D67C50D00B44069 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		DB5FB3591D67C50D00B44069 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
 		DB7FFB711D68C6C60030F71C /* ReportHazardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportHazardViewController.h; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 			children = (
 				DB5FB3581D67C50D00B44069 /* WebServices.h */,
 				DB5FB3591D67C50D00B44069 /* WebServices.m */,
+				DB349DE21D69DFA0004211CC /* DisplayUtil.h */,
+				DB349DE31D69DFA0004211CC /* DisplayUtil.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				9370324F1D683CC6001C673E /* LaunchScreenViewController.m in Sources */,
 				9306EE711D68794D0063E614 /* VSAPTableViewCell.m in Sources */,
 				9306EE621D6862CB0063E614 /* PoliciesViewController.m in Sources */,
+				DB349DE41D69DFA0004211CC /* DisplayUtil.m in Sources */,
 				DB0248481D687B2D00322DB7 /* LeadersVoiceViewController.m in Sources */,
 				DB7FFB731D68C6C60030F71C /* ReportHazardViewController.m in Sources */,
 				DB5FB35A1D67C50D00B44069 /* WebServices.m in Sources */,

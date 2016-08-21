@@ -36,14 +36,20 @@
     [iv addSubview:imageView];
     self.navigationItem.titleView = iv;
 
-    
+    [DisplayUtil showSpinnerOn:self above:self.view];
 	[[WebServices new] fetchHomeMessageSuccess:^(NSArray *responseArray) {
 	  homeMessageArray = responseArray;
 	  [homeTableView reloadData];
-	}
-	    failure:^(NSError *error) {
-	      NSLog(@"eoor %@", error);
+      [DisplayUtil removeSpinnerFrom:self];
+	} failure:^(NSError *error) {
+        NSLog(@"eoor %@", error);
+        [DisplayUtil removeSpinnerFrom:self];
 	    }];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -12,17 +12,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [DisplayUtil showSpinnerOn:self above:self.view];
     [[WebServices new] fetchCategoriesSuccess:^(NSDictionary *responseDict) {
+        [DisplayUtil removeSpinnerFrom:self];
         if ([responseDict objectForKey:@"data"]) {
             categoryArray = [NSArray arrayWithArray:(NSArray *)[responseDict objectForKey:@"data"]];
             [self.tableView reloadData];
         }
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
-
+        [DisplayUtil removeSpinnerFrom:self];
     }];
     
     self.navigationItem.backBarButtonItem.title = @"Back";
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

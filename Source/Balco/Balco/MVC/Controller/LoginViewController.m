@@ -29,6 +29,10 @@
 		      name:UIKeyboardWillHideNotification
 		    object:nil];
 }
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
@@ -54,9 +58,10 @@
 }
 
 - (IBAction)loginButtonAction:(id)sender {
+    [DisplayUtil showSpinnerOn:self above:self.view];
 	[[WebServices new] loginWithPhoneNumber:self.mobileNumberTextField.text
 	    success:^(NSDictionary *responseDict) {
-	      NSLog(@"%@", responseDict);
+	      [DisplayUtil removeSpinnerFrom:self];
 	      if ([[[responseDict objectForKey:@"response"]
 		      objectForKey:@"status"]
 		      isEqualToString:kLoginSuccessMessage]) {
@@ -73,7 +78,8 @@
 	      }
 	    }
 	    failure:^(NSError *error) {
-	      NSLog(@"error %@", error);
+            NSLog(@"error %@", error);
+            [DisplayUtil removeSpinnerFrom:self];
 	    }];
 }
 

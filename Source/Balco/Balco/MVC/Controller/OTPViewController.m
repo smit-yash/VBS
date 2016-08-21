@@ -49,6 +49,11 @@
 		 object:nil];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
+}
+
 - (void)initializeTextFieldsBackGround {
 	[self initializeBorderForTextField:_textField1];
 	[self initializeBorderForTextField:_textField2];
@@ -67,9 +72,11 @@
 	    [[NSUserDefaults standardUserDefaults]
 		stringForKey:@"registeredMobileNumber"];
 
+    [DisplayUtil showSpinnerOn:self above:self.view];
     [[WebServices new] verifyOTP:[NSString stringWithFormat:@"%@%@%@%@",_textField1.text, _textField2.text, _textField3.text, _textField4.text]
 	    forMobileNumber:registeredMobileNumber
 	    success:^(NSDictionary *responseDict) {
+            [DisplayUtil removeSpinnerFrom:self];
 	      if ([[[responseDict objectForKey:@"response"]
 		      objectForKey:@"status"]
 		      isEqualToString:kVerifyOTPSuccessMessage]) {
@@ -87,6 +94,7 @@
 	    }
 	    failure:^(NSError *error) {
 	      NSLog(@"error %@", error);
+            [DisplayUtil removeSpinnerFrom:self];
 	    }];
 }
 

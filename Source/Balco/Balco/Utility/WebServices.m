@@ -157,7 +157,7 @@
     urlString = [NSString stringWithFormat:@"%@?mobile=%@",urlString,registeredMobileNumber];
     
     [manager POST:urlString parameters:nil constructingBodyWithBlock:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSString *htmlString = [[NSString alloc] initWithData:responseObject encoding:NSASCIIStringEncoding];// [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        NSString *htmlString = [[NSString alloc] initWithData:responseObject encoding:NSASCIIStringEncoding];
         success(htmlString);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);

@@ -51,6 +51,11 @@
      object:nil];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter]
@@ -91,7 +96,9 @@
     [self dismissKeyboard];
     
     if (![typeLabel.text isEqualToString:@"Type"] && ![locationLabel.text isEqualToString:@"Location"] && chosenImage) {
+        [DisplayUtil showSpinnerOn:self above:self.view];
         [[WebServices new] postHazardWithImage:chosenImage type:typeLabel.text location:locationLabel.text description:descriptionTextView.text success:^(NSDictionary *responseDict) {
+            [DisplayUtil removeSpinnerFrom:self];
             NSLog(@"%@",responseDict);
             if ([[[responseDict objectForKey:@"response"] objectForKey:@"status"] isEqualToString:@"success"]) {
                 [self.navigationController popViewControllerAnimated:YES];
@@ -100,6 +107,7 @@
             }
         } failure:^(NSError *error) {
             NSLog(@"%@",error);
+            [DisplayUtil removeSpinnerFrom:self];
         }];
     } else {
         if([typeLabel.text isEqualToString:@"Type"]) {

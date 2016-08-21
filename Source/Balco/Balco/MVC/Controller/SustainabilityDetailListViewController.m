@@ -19,8 +19,10 @@
     
     self.title = self.catagoryName;
     
+    [DisplayUtil showSpinnerOn:self above:self.view];
 	[[WebServices new] fetchPDFsForCategoryId:self.categoryId
 	    success:^(NSDictionary *responseDict) {
+            [DisplayUtil removeSpinnerFrom:self];
 	      if ([responseDict objectForKey:@"data"]) {
 		      standardSubListArray =
 			  [NSArray arrayWithArray:(NSArray *)[responseDict
@@ -30,9 +32,15 @@
 	    }
 	    failure:^(NSError *error) {
 	      NSLog(@"%@", error);
+            [DisplayUtil removeSpinnerFrom:self];
 	    }];
 
 	self.navigationItem.backBarButtonItem.title = @"Back";
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

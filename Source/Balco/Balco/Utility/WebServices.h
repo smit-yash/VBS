@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "DisplayUtil.h"
  
 @interface WebServices : NSObject
 

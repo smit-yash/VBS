@@ -18,7 +18,9 @@
     self.leaderImageView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 250);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    [DisplayUtil showSpinnerOn:self above:self.view];
     [[WebServices new] fetchLeadersVoiceSuccess:^(NSDictionary *responseDict) {
+        [DisplayUtil removeSpinnerFrom:self];
         [self.tableView reloadData];
         if ([responseDict objectForKey:@"data4"]) {
             dataSourceString = [responseDict objectForKey:@"data4"];
@@ -31,8 +33,13 @@
         }
 
     } failure:^(NSError *error) {
+        [DisplayUtil removeSpinnerFrom:self];
         NSLog(@"%@",error);
     }];
+}
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

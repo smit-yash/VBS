@@ -13,7 +13,10 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.headerContainerView.layer.cornerRadius = 5.0f;
+    
+    [DisplayUtil showSpinnerOn:self above:self.view];
 	[[WebServices new] fetchScoresSuccess:^(NSDictionary *responseDict) {
+        [DisplayUtil removeSpinnerFrom:self];
 	  if ([responseDict objectForKey:@"data"]) {
 		  scoreArray =
 		      [NSArray arrayWithArray:(NSArray *)[responseDict
@@ -21,12 +24,17 @@
           self.headerViewTitleLabel.text = [scoreArray[0] objectForKey:@"Month"];
 		  [self.tableView reloadData];
 	  }
-	}
-	    failure:^(NSError *error) {
+	} failure:^(NSError *error) {
 	      NSLog(@"%@", error);
+        [DisplayUtil removeSpinnerFrom:self];
 	    }];
 	self.navigationItem.backBarButtonItem.title = @"Back";
     self.title = @"Our VSAP Score Board";
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

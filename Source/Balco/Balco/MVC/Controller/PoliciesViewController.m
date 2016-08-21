@@ -13,15 +13,23 @@
 	[super viewDidLoad];
     self.navigationItem.backBarButtonItem.title = @"Back";
     
+    [DisplayUtil showSpinnerOn:self above:self.view];
     [[WebServices new] fetchPDFsForCategoryId:@"10001" success:^(NSDictionary *responseDict) {
+        [DisplayUtil removeSpinnerFrom:self];
         if ([responseDict objectForKey:@"data"]) {
             policiesArray = [NSArray arrayWithArray:(NSArray *)[responseDict objectForKey:@"data"]];
             [self.tableView reloadData];
         }
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+        [DisplayUtil removeSpinnerFrom:self];
     }];
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [DisplayUtil removeSpinnerFrom:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
