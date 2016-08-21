@@ -162,7 +162,7 @@
 #pragma mark - TextView
 
 -(BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    if ([textView.text isEqualToString:@"Enter short descriptionabout the unsafe situations with your details."]) {
+    if ([textView.text isEqualToString:@"Enter short description about the unsafe situations with your details."]) {
         textView.text = @"";
         textView.textColor = [UIColor blackColor];
     }

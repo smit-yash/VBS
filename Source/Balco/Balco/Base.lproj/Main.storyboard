@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -701,24 +702,6 @@
             </objects>
             <point key="canvasLocation" x="376.5" y="-1046.25"/>
         </scene>
-        <!--Leaders Voice View Controller-->
-        <scene sceneID="nkE-SO-fAW">
-            <objects>
-                <viewController id="9Zq-iY-gTt" customClass="LeadersVoiceViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JNH-2l-jHE"/>
-                        <viewControllerLayoutGuide type="bottom" id="b39-29-I0a"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lge-RY-KUz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3B9-R1-6Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1917" y="-277.5"/>
-        </scene>
         <!--Vedanta Sustainability Standard-->
         <scene sceneID="gre-zp-zXI">
             <objects>
@@ -1367,22 +1350,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wuH-vv-JAK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="wuH-vv-JAK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gAT-9B-W34" firstAttribute="top" secondItem="wuH-vv-JAK" secondAttribute="bottom" id="0Pg-pk-zQe"/>
+                            <constraint firstItem="wuH-vv-JAK" firstAttribute="top" secondItem="UlT-TH-kqQ" secondAttribute="bottom" id="42F-YX-Rfj"/>
+                            <constraint firstAttribute="trailing" secondItem="wuH-vv-JAK" secondAttribute="trailing" id="7QE-ct-2qw"/>
+                            <constraint firstItem="wuH-vv-JAK" firstAttribute="leading" secondItem="hTG-mS-eJM" secondAttribute="leading" id="HD7-u4-HRe"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wuH-vv-JAK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Pg-pk-zQe"/>
+                                <exclude reference="42F-YX-Rfj"/>
+                                <exclude reference="7QE-ct-2qw"/>
+                                <exclude reference="HD7-u4-HRe"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="wuH-vv-JAK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Pg-pk-zQe"/>
+                                <include reference="42F-YX-Rfj"/>
+                                <include reference="7QE-ct-2qw"/>
+                                <include reference="HD7-u4-HRe"/>
                             </mask>
                         </variation>
                     </view>
@@ -2047,7 +2045,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofF-ub-eEt">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter short descriptionabout the unsafe situations with your details." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWC-WH-Vip">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter short description about the unsafe situations with your details." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWC-WH-Vip">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2673,6 +2671,7 @@
         <image name="BlueLogo" width="132" height="132"/>
         <image name="Camera" width="1200" height="1200"/>
         <image name="Hazard" width="133" height="120"/>
+        <image name="Launch" width="248" height="440"/>
         <image name="LeadersVoice" width="133" height="120"/>
         <image name="Policies" width="134" height="120"/>
         <image name="Quiz" width="133" height="120"/>
@@ -2680,7 +2679,7 @@
         <image name="Standard" width="133" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qcj-ly-ygO"/>
+        <segue reference="wNn-Te-jkG"/>
         <segue reference="FGj-6c-UHo"/>
     </inferredMetricsTieBreakers>
 </document>
