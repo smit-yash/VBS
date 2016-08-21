@@ -26,9 +26,6 @@
 
 - (void)handleAlertForError: (NSError *) error withTitle:(NSString *)title message:(NSString *)message;
 
-- (void)enqueueAlertWithTitle:(NSString *)title
-                      message:(NSString *)message;
-
 @end
 
 @protocol AppAlertsDelegate <NSObject>

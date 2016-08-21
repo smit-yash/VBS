@@ -24,7 +24,6 @@
 		DB02484E1D6898D800322DB7 /* MsgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02484D1D6898D800322DB7 /* MsgDetailViewController.m */; };
 		DB0248511D68A90800322DB7 /* SustainabilityDetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0248501D68A90800322DB7 /* SustainabilityDetailListViewController.m */; };
 		DB066B9A1D67A9EC00162079 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB066B991D67A9EC00162079 /* HomeTableViewCell.m */; };
-		DB08425D1D6928AA0067027E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBA8F98D1D678A0F006BBA45 /* Info.plist */; };
 		DB08425F1D6930E50067027E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08425E1D6930E50067027E /* Launch Screen.storyboard */; };
 		DB349DE41D69DFA0004211CC /* DisplayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DB349DE31D69DFA0004211CC /* DisplayUtil.m */; };
 		DB349DE71D69E50E004211CC /* AppAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = DB349DE61D69E50E004211CC /* AppAlerts.m */; };
@@ -329,7 +328,6 @@
 				DBA8F9891D678A0F006BBA45 /* Assets.xcassets in Resources */,
 				DBA8F9871D678A0F006BBA45 /* Main.storyboard in Resources */,
 				DB08425F1D6930E50067027E /* Launch Screen.storyboard in Resources */,
-				DB08425D1D6928AA0067027E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
