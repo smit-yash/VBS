@@ -43,6 +43,7 @@
       [DisplayUtil removeSpinnerFrom:self];
 	} failure:^(NSError *error) {
         NSLog(@"eoor %@", error);
+        [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
         [DisplayUtil removeSpinnerFrom:self];
 	    }];
 }

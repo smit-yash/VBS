@@ -95,27 +95,38 @@
 - (IBAction)submit:(id)sender {
     [self dismissKeyboard];
     
-    if (![typeLabel.text isEqualToString:@"Type"] && ![locationLabel.text isEqualToString:@"Location"] && chosenImage) {
+    if (![typeLabel.text isEqualToString:@"Type"] && ![locationLabel.text isEqualToString:@"Location"] && chosenImage && descriptionTextView.text.length && ![descriptionTextView.text isEqualToString:@"Enter short description about the unsafe situations with your details."]) {
         [DisplayUtil showSpinnerOn:self above:self.view];
         [[WebServices new] postHazardWithImage:chosenImage type:typeLabel.text location:locationLabel.text description:descriptionTextView.text success:^(NSDictionary *responseDict) {
             [DisplayUtil removeSpinnerFrom:self];
             NSLog(@"%@",responseDict);
             if ([[[responseDict objectForKey:@"response"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                [self.view endEditing:YES];
+                [[AppAlerts new] handleAlertForError:nil withTitle:@"Success" message:@"Report Submitted Successfully."];
                 [self.navigationController popViewControllerAnimated:YES];
             } else {
                 NSLog(@"%@",[[responseDict objectForKey:@"response"] objectForKey:@"status"]);
+                [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:[[responseDict objectForKey:@"response"] objectForKey:@"status"]];
+
             }
         } failure:^(NSError *error) {
             NSLog(@"%@",error);
             [DisplayUtil removeSpinnerFrom:self];
+            [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
+
         }];
     } else {
-        if([typeLabel.text isEqualToString:@"Type"]) {
+        if (!chosenImage) {
+            //image error
+            [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:@"Please select an Image"];
+        } else if([typeLabel.text isEqualToString:@"Type"]) {
             //enter type error
+            [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:@"Please Enter type"];
         } else if ([locationLabel.text isEqualToString:@"Location"]) {
             //enter location error
-        } else if (!chosenImage) {
-            //image error
+            [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:@"Please Enter Location"];
+        } else if (!descriptionTextView.text.length || [descriptionTextView.text isEqualToString:@"Enter short description about the unsafe situations with your details."]) {
+            [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:@"Please Enter Description"];
         }
     }
 }

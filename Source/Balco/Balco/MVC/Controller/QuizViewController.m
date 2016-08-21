@@ -17,13 +17,14 @@
     [super viewDidLoad];
     [DisplayUtil showSpinnerOn:self above:self.view];
     [[WebServices new] fetchQuizSuccess:^(NSString *htmlString) {
-        [DisplayUtil removeSpinnerFrom:self];
         if (htmlString.length) {
             [webView loadHTMLString:htmlString baseURL: [[NSBundle mainBundle] bundleURL]];
         }
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
         [DisplayUtil removeSpinnerFrom:self];
+        [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
+
     }];
     
     self.title = @"Quiz";
@@ -48,10 +49,15 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"finished");
+    [DisplayUtil removeSpinnerFrom:self];
+
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
     NSLog(@"%@",error);
+    [DisplayUtil removeSpinnerFrom:self];
+    [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
+
 }
 
 @end

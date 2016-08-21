@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DisplayUtil.h"
+#import "AppAlerts.h"
  
 @interface WebServices : NSObject
 

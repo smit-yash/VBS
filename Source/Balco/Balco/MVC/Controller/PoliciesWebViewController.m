@@ -46,6 +46,8 @@
 - (void)webView:(UIWebView *)webView
     didFailLoadWithError:(nullable NSError *)error {
 	NSLog(@"%@", error);
+    [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
+
     [DisplayUtil removeSpinnerFrom:self];
 }
 

@@ -27,6 +27,7 @@
 	} failure:^(NSError *error) {
 	      NSLog(@"%@", error);
         [DisplayUtil removeSpinnerFrom:self];
+        [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
 	    }];
 	self.navigationItem.backBarButtonItem.title = @"Back";
     self.title = @"Our VSAP Score Board";

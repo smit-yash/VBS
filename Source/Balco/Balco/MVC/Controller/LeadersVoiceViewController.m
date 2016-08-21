@@ -35,6 +35,7 @@
     } failure:^(NSError *error) {
         [DisplayUtil removeSpinnerFrom:self];
         NSLog(@"%@",error);
+        [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
     }];
 }
 -(void)viewWillDisappear:(BOOL)animated {

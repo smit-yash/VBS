@@ -90,11 +90,15 @@
 		      NSString *errorMessage = [[responseDict
 			  objectForKey:@"response"] objectForKey:@"status"];
 		      NSLog(@"error %@", errorMessage);
+              [[AppAlerts new] handleAlertForError:nil withTitle:@"Error" message:errorMessage];
+
 	      }
 	    }
 	    failure:^(NSError *error) {
 	      NSLog(@"error %@", error);
             [DisplayUtil removeSpinnerFrom:self];
+            [[AppAlerts new] handleAlertForError:error withTitle:@"Error" message:error.description];
+
 	    }];
 }
 
