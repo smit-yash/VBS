@@ -4,12 +4,16 @@
 #define kBaseURL @"http://bsapp.app6.in"
 #define kLoginEndpoint @"/API/App/LoginAPI.aspx"
 #define kVerifyOTPEndpoint @"/API/App/OTPVerficationAPI.aspx"
-#define kHomeMessageEndpoint @"/api/app/msg.aspx?id=0"
-#define kLeadersVoiceEndpoint @"/API/App/LeadersVoice.aspx"
+//#define kHomeMessageEndpoint @"/api/app/msg.aspx?id=0"
+#define kHomeMessageEndpoint @"/api/app/feeds.aspx"
+#define kLeadersVoiceEndpoint @"/aPI/App/ios/LeadersVoice.aspx"
 #define kCategoriesEndpoint @"/API/App/CatagoryAPI.aspx"
 #define kPDFsEndpoint @"/API/App/PDFAPI.aspx"
 #define kScoresEndpoint @"/API/App/ScoreAPI.aspx"
-#define kQuizEndpoint @"/api/app/QuizAPI_advnjsdnfv_ksdnfgn.aspx"
+//#define kQuizEndpoint @"/api/app/QuizAPI_advnjsdnfv_ksdnfgn.aspx"
+#define kQuizEndpoint @"/aPI/App/ios/QuizAPI_advnjsdnfv_ksdnfgn.aspx"
+#define kReportHazardEndpoint @"/api/app/ios/report_input_ios.aspx"
+
 
 #define kMessageAPISuccessMessage @"success"
 
@@ -158,6 +162,37 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
         NSLog(@"error %@",error);
+    }];
+}
+
+- (void)postHazardWithImage:(UIImage *)image type:(NSString *)type location:(NSString *)location   description:(NSString *)descriptionText success:(void (^)(NSDictionary *responseDict))success failure:(void (^)(NSError *error))failure {
+    [self initializeManager];
+    
+    NSString *urlString = [self urlStringForEndpoint:kReportHazardEndpoint];
+    NSString *registeredMobileNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"registeredMobileNumber"];
+    NSData *imageData = UIImageJPEGRepresentation(image,0.5);
+
+    [manager POST:urlString parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:imageData
+                                    name:@"image"
+                                fileName:@"image" mimeType:@"image/jpeg"];
+        
+        [formData appendPartWithFormData:[type dataUsingEncoding:NSUTF8StringEncoding]
+                                    name:@"type"];
+        
+        [formData appendPartWithFormData:[location dataUsingEncoding:NSUTF8StringEncoding]
+                                    name:@"location"];
+        [formData appendPartWithFormData:[registeredMobileNumber dataUsingEncoding:NSUTF8StringEncoding]
+                                    name:@"mobile"];
+        [formData appendPartWithFormData:[descriptionText dataUsingEncoding:NSUTF8StringEncoding]
+                                    name:@"description"];
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        success(responseDict);
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
     }];
 }
 

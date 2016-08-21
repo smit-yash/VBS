@@ -13,6 +13,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem.title = @"Back";
+    self.title = @"Leader's Voice";
     
     self.leaderImageView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 250);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

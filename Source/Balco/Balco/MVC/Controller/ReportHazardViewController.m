@@ -15,6 +15,7 @@
     __weak IBOutlet UITableView *locationTableView;
     __weak IBOutlet UIButton *cameraIconOutlet;
     
+    UIImage *chosenImage;
     NSArray *typeArray;
     NSArray *locationsArray;
 }
@@ -89,10 +90,25 @@
 - (IBAction)submit:(id)sender {
     [self dismissKeyboard];
     
-    if (![typeLabel.text isEqualToString:@"Type"] && ![locationLabel.text isEqualToString:@"Location"]) {
-        //API Call
+    if (![typeLabel.text isEqualToString:@"Type"] && ![locationLabel.text isEqualToString:@"Location"] && chosenImage) {
+        [[WebServices new] postHazardWithImage:chosenImage type:typeLabel.text location:locationLabel.text description:descriptionTextView.text success:^(NSDictionary *responseDict) {
+            NSLog(@"%@",responseDict);
+            if ([[[responseDict objectForKey:@"response"] objectForKey:@"status"] isEqualToString:@"success"]) {
+                [self.navigationController popViewControllerAnimated:YES];
+            } else {
+                NSLog(@"%@",[[responseDict objectForKey:@"response"] objectForKey:@"status"]);
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
     } else {
-        //alert
+        if([typeLabel.text isEqualToString:@"Type"]) {
+            //enter type error
+        } else if ([locationLabel.text isEqualToString:@"Location"]) {
+            //enter location error
+        } else if (!chosenImage) {
+            //image error
+        }
     }
 }
 
@@ -174,12 +190,12 @@
     NSDictionary *info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
-    [self.view setFrame:CGRectMake(0, -kbSize.height, self.view.frame.size.width,
+    [self.view setFrame:CGRectMake(0, -kbSize.height +64, self.view.frame.size.width,
                                    self.view.frame.size.height)];
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification {
-    [self.view setFrame:CGRectMake(0, 0, self.view.frame.size.width,
+    [self.view setFrame:CGRectMake(0, 64, self.view.frame.size.width,
                                    self.view.frame.size.height)];
 }
 
@@ -225,7 +241,7 @@
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    chosenImage = info[UIImagePickerControllerEditedImage]; //UIImagePickerControllerReferenceURL
     [cameraIconOutlet setImage:chosenImage forState:UIControlStateNormal];
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }

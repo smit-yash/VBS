@@ -63,6 +63,7 @@
     NSDictionary *dict = [categoryArray objectAtIndex:selectedIndexPath.row];
     
     vc.categoryId = [dict objectForKey:@"AutoID"];
+    vc.catagoryName = [dict objectForKey:@"CatagoryName"];
 }
 
 @end

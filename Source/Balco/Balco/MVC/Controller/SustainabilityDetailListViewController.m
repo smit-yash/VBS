@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    
+    self.title = self.catagoryName;
+    
 	[[WebServices new] fetchPDFsForCategoryId:self.categoryId
 	    success:^(NSDictionary *responseDict) {
 	      if ([responseDict objectForKey:@"data"]) {
