@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="haC-Jg-IaQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="haC-Jg-IaQ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -106,7 +106,9 @@
                                                 <variation key="heightClass=regular" constant="-1"/>
                                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                             </constraint>
-                                            <constraint firstItem="0dB-W1-zrN" firstAttribute="leading" secondItem="Fas-n9-2Yf" secondAttribute="trailing" id="QIV-BO-y2l"/>
+                                            <constraint firstItem="0dB-W1-zrN" firstAttribute="leading" secondItem="Fas-n9-2Yf" secondAttribute="trailing" id="QIV-BO-y2l">
+                                                <variation key="heightClass=regular" constant="-1"/>
+                                            </constraint>
                                             <constraint firstItem="Fas-n9-2Yf" firstAttribute="height" secondItem="0dB-W1-zrN" secondAttribute="height" id="UXw-ZL-kz8"/>
                                             <constraint firstItem="Fas-n9-2Yf" firstAttribute="leading" secondItem="TSH-9E-G8n" secondAttribute="trailing" multiplier="133/400" id="ZR8-NT-3O2"/>
                                             <constraint firstItem="0dB-W1-zrN" firstAttribute="leading" secondItem="TSH-9E-G8n" secondAttribute="trailing" multiplier="267/400" id="cMD-7J-BjB"/>
@@ -202,7 +204,7 @@
                                             <constraint firstItem="fPH-NK-heY" firstAttribute="top" secondItem="wB2-UO-NCn" secondAttribute="top" id="KOk-Bf-N4T"/>
                                             <constraint firstItem="Vje-8H-N4w" firstAttribute="height" secondItem="AmI-eZ-ciB" secondAttribute="height" id="XxZ-zD-E8Z"/>
                                             <constraint firstItem="Vje-8H-N4w" firstAttribute="width" secondItem="fPH-NK-heY" secondAttribute="width" id="fhc-7y-fuB">
-                                                <variation key="heightClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular" constant="1"/>
                                             </constraint>
                                             <constraint firstItem="fPH-NK-heY" firstAttribute="leading" secondItem="AmI-eZ-ciB" secondAttribute="trailing" id="kTl-SR-8su"/>
                                             <constraint firstAttribute="trailing" secondItem="fPH-NK-heY" secondAttribute="trailing" id="ojc-WO-SdF">
@@ -271,10 +273,12 @@
                                     </constraint>
                                     <constraint firstItem="wB2-UO-NCn" firstAttribute="leading" secondItem="GMS-BC-Y6A" secondAttribute="leading" id="SJH-Qe-HUq"/>
                                     <constraint firstAttribute="trailing" secondItem="wB2-UO-NCn" secondAttribute="trailing" id="UEf-Zr-oCG"/>
-                                    <constraint firstItem="Fas-n9-2Yf" firstAttribute="width" secondItem="AmI-eZ-ciB" secondAttribute="width" id="chj-rF-pJu"/>
+                                    <constraint firstItem="Fas-n9-2Yf" firstAttribute="width" secondItem="AmI-eZ-ciB" secondAttribute="width" id="chj-rF-pJu">
+                                        <variation key="heightClass=regular" constant="1"/>
+                                    </constraint>
                                     <constraint firstItem="wB2-UO-NCn" firstAttribute="top" secondItem="TSH-9E-G8n" secondAttribute="bottom" id="ky9-Vm-yC8"/>
                                     <constraint firstItem="5sK-LG-f9s" firstAttribute="width" secondItem="Vje-8H-N4w" secondAttribute="width" id="l8H-bf-oyv">
-                                        <variation key="heightClass=regular" constant="0.0"/>
+                                        <variation key="heightClass=regular" constant="-1"/>
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="wB2-UO-NCn" secondAttribute="bottom" id="tbu-kW-Ttl"/>
                                     <constraint firstItem="0dB-W1-zrN" firstAttribute="height" secondItem="Vje-8H-N4w" secondAttribute="height" id="vLb-3W-8ZV">
@@ -530,15 +534,15 @@
                                 <exclude reference="a7Y-Qh-9Ih"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="dGS-cD-zkO"/>
-                                <exclude reference="hIO-aF-8hb"/>
-                                <exclude reference="w1S-Os-STd"/>
+                                <exclude reference="8nf-xK-PEh"/>
                                 <exclude reference="JdY-tZ-cef"/>
                                 <exclude reference="JkA-aE-iq6"/>
                                 <exclude reference="KTi-af-yLL"/>
                                 <exclude reference="YMb-97-iLx"/>
                                 <exclude reference="aqF-cU-PzK"/>
-                                <exclude reference="8nf-xK-PEh"/>
+                                <exclude reference="dGS-cD-zkO"/>
+                                <exclude reference="hIO-aF-8hb"/>
+                                <exclude reference="w1S-Os-STd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -546,14 +550,14 @@
                                 <include reference="a7Y-Qh-9Ih"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="dGS-cD-zkO"/>
-                                <include reference="hIO-aF-8hb"/>
-                                <include reference="w1S-Os-STd"/>
+                                <include reference="8nf-xK-PEh"/>
                                 <include reference="JdY-tZ-cef"/>
                                 <include reference="KTi-af-yLL"/>
                                 <include reference="YMb-97-iLx"/>
                                 <include reference="aqF-cU-PzK"/>
-                                <include reference="8nf-xK-PEh"/>
+                                <include reference="dGS-cD-zkO"/>
+                                <include reference="hIO-aF-8hb"/>
+                                <include reference="w1S-Os-STd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
